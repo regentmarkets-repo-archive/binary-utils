@@ -1,4 +1,4 @@
-import groupByKey from '../_utils/groupByKey';
+import groupByKey from './groupByKey';
 
 export default contracts => {
     const extraRemoved = contracts.map(contract => ({
