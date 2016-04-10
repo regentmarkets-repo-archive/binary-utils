@@ -1,4 +1,4 @@
-export const arrayEqual = (a, b) => {
+export default (a, b) => {
     if (a.length !== b.length) {
         return false;
     }

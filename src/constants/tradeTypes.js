@@ -1,4 +1,4 @@
-export const tradeTypes = [
+export default [
 	{ value: 'CALL', text: 'Rise', img: 'img/trade-call.svg', ticks: true },
 	{ value: 'PUT', text: 'Fall', img: 'img/trade-put.svg', ticks: true },
 	{ value: 'DIGITMATCH', text: 'Digit Match', img: 'img/trade-digitmatch.svg', ticks: true, barrier: true },
@@ -18,5 +18,3 @@ export const tradeTypes = [
     { value: 'SPREADU', text: 'Spread Long', img: 'img/trade-spreadu.svg', ticks: false },
     { value: 'SPREADD', text: 'Spread Short', img: 'img/trade-spreadu.svg', ticks: false },
 ];
-
-export const durationUnits = ['t', 's', 'm', 'h', 'd'];

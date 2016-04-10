@@ -1,4 +1,4 @@
-export const assetsFromServer = [
+export default [
     {
         "market": "indices",
         "symbol": "FCHI",

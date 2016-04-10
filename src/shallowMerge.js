@@ -1,4 +1,4 @@
-export const shallowMerge = (arr1, arr2) => {
+export default (arr1, arr2) => {
     if (arr1.length === 0) {
         return arr2;
     }

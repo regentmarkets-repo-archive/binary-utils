@@ -1,4 +1,5 @@
-import { epochToUTCTimeString, timeStringIsBetween } from './DateUtils';
+import epochToUTCTimeString from './date/epochToUTCTimeString';
+import timeStringIsBetween from './date/timeStringIsBetween';
 
 export default (assets, times, now) => {
     const nowInTimeString = epochToUTCTimeString(now);
