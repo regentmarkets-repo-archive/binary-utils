@@ -4,7 +4,7 @@ module.exports = (wallaby) => ({
         load: false,
     }],
     tests: [
-        'tests/*.js',
+        'tests/**/*.js',
     ],
     env: {
         type: 'node',
@@ -14,7 +14,7 @@ module.exports = (wallaby) => ({
         '**/*.js': wallaby.compilers.babel({
             presets: [
                 'es2015',
-                'stage-1'
+                'stage-1',
             ],
         }),
     },
