@@ -1,4 +1,4 @@
-export default [
+module.exports = [
     {
         "market": "indices",
         "symbol": "FCHI",

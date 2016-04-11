@@ -1,4 +1,4 @@
-export default [
+module.exports = [
     {
         "contract_display": "asian up",
         "market": "random",

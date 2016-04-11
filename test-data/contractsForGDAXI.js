@@ -1,4 +1,4 @@
-export default [
+module.exports = [
     {
         "contract_display": "ends outside",
         "market": "indices",
