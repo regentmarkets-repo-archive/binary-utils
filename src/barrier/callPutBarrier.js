@@ -1,6 +1,6 @@
 import relativeBarrier from './relativeBarrier';
 
-export default (contract, lastSpot) =>
+export default (contract, lastTick) =>
     contract.barrier ?
-        relativeBarrier(contract, lastSpot) :
-        +contract.entry_spot || (lastSpot && lastSpot.quote);
+        relativeBarrier(contract, lastTick) :
+        +contract.entry_spot || lastTick;

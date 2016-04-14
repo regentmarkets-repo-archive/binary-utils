@@ -1,2 +1,2 @@
-export default (barrier, entrySpot, lastSpot) =>
-    +barrier + (+entrySpot || (lastSpot && lastSpot.quote));
+export default (barrier, entrySpot, lastTick) =>
+    +barrier + (+entrySpot || lastTick);
