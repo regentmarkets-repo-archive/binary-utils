@@ -7,10 +7,10 @@ describe('sequence', () => {
     });
 
     it('1 element requested returns an array with one value of 1', () => {
-        expect(sequence(1)).to.deep.equal([1]);
+        expect(sequence(1)).to.deep.equal([0]);
     });
 
     it('several element requested returns a sequential array', () => {
-        expect(sequence(5)).to.deep.equal([1, 2, 3, 4, 5]);
+        expect(sequence(5)).to.deep.equal([0, 1, 2, 3, 4]);
     });
 });
