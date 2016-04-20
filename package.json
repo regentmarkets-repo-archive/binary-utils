@@ -1,6 +1,6 @@
 {
   "name": "binary-utils",
-  "version": "1.4.4",
+  "version": "1.5.0",
   "description": "Utils for binary.com",
   "main": "index.js",
   "scripts": {
