@@ -1,5 +1,5 @@
-export default (contract, lastTick) => {
-    const barrierValue = +contract.barrier; // or barrier2;
+export default (contract, lastTick, barrierEntryName = 'barrier') => {
+    const barrierValue = +contract[barrierEntryName];
     if (!barrierValue) {
         return lastTick;
     }

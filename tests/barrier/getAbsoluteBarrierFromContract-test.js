@@ -25,4 +25,10 @@ describe('getAbsoluteBarrierFromContract', () => {
         const value = getAbsoluteBarrierFromContract(contract, 50);
         expect(value).to.equal(120);
     });
+
+    it('can pass third parameter to get second barrier', () => {
+        const contract = { barrier2: 20, entry_spot: 100, barrierType: 'relative' };
+        const value = getAbsoluteBarrierFromContract(contract, 50, 'barrier2');
+        expect(value).to.equal(120);
+    });
 });
