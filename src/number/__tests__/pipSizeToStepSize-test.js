@@ -10,5 +10,5 @@ describe('pipSizeToStepSize', () => {
     it('should return 0.01 if input is not a number', () => {
         const pipSize = '3w';
         expect(pipSizeToStepSize(pipSize)).to.be.equal('0.01');
-    })
+    });
 });
