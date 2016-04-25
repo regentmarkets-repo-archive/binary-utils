@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import areArraysEqual from '../areArraysEqual';
 
-describe('arrayEqual', () => {
+describe('areArraysEqual', () => {
     it('empty arrays are equal', () => {
         const ticks1 = [];
         const ticks2 = [];
