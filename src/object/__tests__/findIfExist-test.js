@@ -1,7 +1,7 @@
 import { expect } from 'chai';
-import findIfExist from '../findIfExist';
+import findDeep from '../findDeep';
 
-describe('findIfExist', () => {
+describe('findDeep', () => {
     it('find if any values in object meet a predicate, recursively', () => {
         const testObj = {
             a: {
@@ -19,8 +19,8 @@ describe('findIfExist', () => {
         const predicate1 = o => o === 'halo';
         const predicate2 = o => Array.isArray(o) && o.indexOf(1) === 0;
 
-        const result1 = findIfExist(testObj, predicate1);
-        const result2 = findIfExist(testObj, predicate2);
+        const result1 = findDeep(testObj, predicate1);
+        const result2 = findDeep(testObj, predicate2);
 
         expect(result1).to.be.true;
         expect(result2).to.be.true;
