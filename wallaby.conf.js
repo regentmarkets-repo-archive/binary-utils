@@ -1,10 +1,14 @@
-module.exports = (wallaby) => ({
+module.exports = wallaby => ({
     files: [{
         pattern: 'src/**/*.js*',
         load: false,
+    }, {
+        pattern: 'src/**/__tests__/*.js',
+        ignore: true,
     }],
     tests: [
-        'tests/**/*.js',
+        'src/__tests__/*.js',
+        'src/**/__tests__/*.js',
     ],
     env: {
         type: 'node',
