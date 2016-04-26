@@ -2,21 +2,23 @@ import { expect } from 'chai';
 import getLastTick from '../getLastTick';
 
 describe('getLastTick', () => {
-    it('does not throw on empty input', () => {
-        expect(getLastTick()).to.not.throw;
-        expect(getLastTick()).to.equal(0);
+    it('when no input, result is undefined', () => {
+        const lastTick = getLastTick();
+        expect(lastTick).to.be.undefined;
     });
 
-    it('does not throw on empty list as input', () => {
-        expect(getLastTick([])).to.not.throw;
-        expect(getLastTick([])).to.equal(0);
+    it('when no elements in the array, result is undefined', () => {
+        const lastTick = getLastTick([]);
+        expect(lastTick).to.be.undefined;
     });
 
-    it('single item as input, is returned as output', () => {
-        expect(getLastTick([{ quote: 5 }])).to.equal(5);
+    it('returns last item in array', () => {
+        const wuut = getLastTick([1]);
+        expect(wuut).to.equal(1);
     });
 
-    it('when passed multiple items, last one is returned', () => {
-        expect(getLastTick([{ quote: 1 }, { quote: 2 }, { quote: 3 }])).to.equal(3);
+    it('returns last item in array, even if it is object', () => {
+        const wuut = getLastTick([{ quote: 5 }]);
+        expect(wuut).to.deep.equal({ quote: 5 });
     });
 });
