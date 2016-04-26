@@ -1,6 +1,8 @@
 export default [
 	{ value: 'CALL', text: 'Rise', img: 'img/trade-call.svg', ticks: true },
 	{ value: 'PUT', text: 'Fall', img: 'img/trade-put.svg', ticks: true },
+	{ value: 'HIGHER', text: 'Higher', img: 'img/trade-higher.svg', ticks: false },
+	{ value: 'LOWER', text: 'Lower', img: 'img/trade-lower.svg', ticks: false },
 	{ value: 'DIGITMATCH', text: 'Digit Match', img: 'img/trade-digitmatch.svg', ticks: true, barrier: true },
 	{ value: 'DIGITDIFF', text: 'Digit Differs', img: 'img/trade-digitdiff.svg', tick: true, barrier: true },
 	{ value: 'DIGITOVER', text: 'Digit Over', img: 'img/trade-digitover.svg', tick: true, barrier: true },
