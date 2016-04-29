@@ -3,7 +3,7 @@ export default (contract, lastTick, barrierEntryName = 'barrier') => {
     if (!barrierValue) {
         return lastTick;
     }
-    if (contract.barrierType === 'absolute') {
+    if (contract.barrierType !== 'relative') {
         return barrierValue;
     }
     if (typeof contract.entry_spot === 'undefined' && typeof lastTick === 'undefined') {

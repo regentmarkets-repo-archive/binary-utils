@@ -8,6 +8,12 @@ describe('getAbsoluteBarrierFromContract', () => {
         expect(value).to.equal(123);
     });
 
+    it('when barrierType is not provided, absolute is default', () => {
+        const contract = { barrier: 20 };
+        const value = getAbsoluteBarrierFromContract(contract,  50);
+        expect(value).to.equal(20);
+    });
+
     it('when barrier is absolute, return barrier value directly', () => {
         const contract = { barrier: 100, barrierType: 'absolute' };
         const value = getAbsoluteBarrierFromContract(contract);
