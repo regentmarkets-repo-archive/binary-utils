@@ -6,5 +6,8 @@ export default (contract, lastTick, barrierEntryName = 'barrier') => {
     if (contract.barrierType === 'absolute') {
         return barrierValue;
     }
+    if (typeof contract.entry_spot === 'undefined' && typeof lastTick === 'undefined') {
+        throw new Error('Relative barrier can not be calculated');
+    }
     return barrierValue + (+contract.entry_spot || lastTick);
 };

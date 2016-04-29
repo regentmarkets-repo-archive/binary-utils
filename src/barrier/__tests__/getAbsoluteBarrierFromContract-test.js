@@ -31,4 +31,9 @@ describe('getAbsoluteBarrierFromContract', () => {
         const value = getAbsoluteBarrierFromContract(contract, 50, 'barrier2');
         expect(value).to.equal(120);
     });
+
+    it('when relative barrier is calculated, entry_spot or lastTick is needed', () => {
+        const contract = { barrier: 20, barrierType: 'relative' };
+        expect(() => getAbsoluteBarrierFromContract(contract)).to.throw();
+    });
 });
