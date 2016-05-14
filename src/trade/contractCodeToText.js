@@ -8,4 +8,16 @@ export default code => ({
     date_settlement: 'Settlement Time',
     sell_spot_time: 'Sell Time',
     sell_time: 'Server Sell Time',
+
+	current_spot_time: '???',
+
+	ask_price: 'Ask Price',
+	bid_price: 'Bid Price',
+	current_spot: 'Current Spot',
+	entry_tick: 'Entry Tick (Spot?)',
+	entry_spot: 'Entry Spot',
+	exit_tick: 'Exit Tick (Spot?)',
+	sell_price: 'Exit Price',
+	buy_price: 'Entry Price',
+	sell_spot: 'Sell Spot',
 })[code];
