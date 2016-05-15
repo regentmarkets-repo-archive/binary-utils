@@ -20,4 +20,7 @@ export default code => ({
 	sell_price: 'Exit Price',
 	buy_price: 'Entry Price',
 	sell_spot: 'Sell Spot',
+
+	barrier: 'Barrier',
+	barrier2: 'Low Barrier',
 })[code];
