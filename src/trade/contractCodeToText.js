@@ -1,4 +1,6 @@
 export default code => ({
+	contract_id: 'Contract ID',
+
 	date_start: 'Start Time',
     purchase_time: 'Purchase Time',
 	entry_tick_time: 'Entry Spot',
