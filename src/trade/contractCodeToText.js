@@ -1,27 +1,28 @@
 export default code => ({
 	contract_id: 'Contract ID',
-
-	date_start: 'Start Time',
-    purchase_time: 'Purchase Time',
-	entry_tick_time: 'Entry Spot',
-	date_expiry: 'Expiry Time',
-    expiry_time: 'Expiry Time',
-    exit_tick_time: 'Exit Time',
-    date_settlement: 'Settlement Time',
-    sell_time: 'Sell Time',
-
-	current_spot_time: 'Current Time',
-
+	purchase_time: 'Purchase Time',
 	ask_price: 'Ask Price',
 	bid_price: 'Bid Price',
+	date_start: 'Start Time',
+	date_expiry: 'Expiry Time',
+	date_settlement: 'Settlement Time',
+    expiry_time: 'Expiry Time',
+
 	current_spot: 'Current Spot',
+	current_spot_time: 'Current Spot Time',
 	entry_spot: 'Entry Spot',
-	exit_tick: 'Exit Spot',
-	sell_price: 'Exit Price',
-	buy_price: 'Entry Price',
+	entry_tick_time: 'Entry Spot Time',
+	sell_price: 'Sell Price',
+	buy_price: 'Buy Price',
 
 	barrier: 'Barrier',
-	barrier2: 'Low Barrier',
+	low_barrier: 'Low Barrier',
+	high_barrier: 'High Barrier',
+
+	sell_time: 'Sell Time',
+
+	exit_tick_time: 'Exit Spot Time',		// to be confirmed
+	exit_tick: 'Exit Spot',				// to show both or not?
 
 	sell_spot_time: 'DO NOT USE',
 	entry_tick: 'DO NOT USE',
