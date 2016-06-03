@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = [
     {
         "contract_display": "asian up",
