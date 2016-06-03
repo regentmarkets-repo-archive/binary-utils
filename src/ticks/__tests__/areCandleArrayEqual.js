@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import areOHLCArraysEqual from '../areOHLCArrayEqual';
+import areOHLCArraysEqual from '../areCandleArrayEqual';
 
 describe('areOHLCArraysEqual', () => {
     it('two empty tick lists are equal', () => {
