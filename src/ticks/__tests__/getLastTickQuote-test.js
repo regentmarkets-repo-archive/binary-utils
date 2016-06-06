@@ -4,12 +4,12 @@ import getLastTickQuote from '../getLastTickQuote';
 describe('getLastTickQuote', () => {
     it('does not throw on empty input', () => {
         expect(getLastTickQuote()).to.not.throw;
-        expect(getLastTickQuote()).to.equal(0);
+        expect(getLastTickQuote()).to.equal(undefined);
     });
 
     it('does not throw on empty list as input', () => {
         expect(getLastTickQuote([])).to.not.throw;
-        expect(getLastTickQuote([])).to.equal(0);
+        expect(getLastTickQuote([])).to.equal(undefined);
     });
 
     it('single item as input, is returned as output', () => {
