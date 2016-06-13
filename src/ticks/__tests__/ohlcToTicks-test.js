@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import candles from '../../../test-data/candles';
+import candles from 'binary-test-data/candles';
 import ohlcToTicks from '../ohlcToTicks';
 
 describe('ohlcToTicks', () => {

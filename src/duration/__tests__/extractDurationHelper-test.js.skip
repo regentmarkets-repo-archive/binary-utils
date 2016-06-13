@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import extractDurationHelper from '../extractDurationHelper';
-import contractsForR50 from '../../../test-data/contractsForR50';
+import contractsForR50 from 'binary-test-data/contractsForR50';
 
 describe('extractDurationHelper', () => {
     it('should return empty array for spreads as spreads does not have duration', () => {
