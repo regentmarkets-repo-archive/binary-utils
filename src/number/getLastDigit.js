@@ -1,2 +1,2 @@
-export default (value, pip) =>
-    +value.toFixed(pip).slice(-1);
+export default (value, pips) =>
+    +value.toFixed(pips).slice(-1);
