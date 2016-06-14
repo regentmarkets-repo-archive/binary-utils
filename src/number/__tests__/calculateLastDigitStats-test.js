@@ -1,5 +1,6 @@
 import { expect } from 'chai';
 import calculateLastDigitStats from '../calculateLastDigitStats';
+import testTicks from 'binary-test-data/ticks';
 
 describe('calculateLastDigitStats', () => {
     it('empty array results in 0s', () => {
@@ -14,6 +15,13 @@ describe('calculateLastDigitStats', () => {
         expect(result).to.deep.equal([0, 0, 0, 100, 0, 0, 0, 0, 0, 0]);
     });
 
+    it('the sum of all percentage should be 100%', () => {
+        const result = calculateLastDigitStats(testTicks, 2);
+        const sum = result.reduce((a, b) => a + b);
+        
+        expect(sum).to.equal(100);
+    });
+    
     it('works correctly', () => {
         const input = [
             { quote: 10 },
