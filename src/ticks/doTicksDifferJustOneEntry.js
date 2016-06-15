@@ -3,7 +3,7 @@ import doTicksEqual from './doTicksEqual';
 export default (ticks1, ticks2) => {
     const lengthDiff = Math.abs(ticks1.length - ticks2.length);
 
-    if (lengthDiff !== 1 && ticks1.length === 0) {
+    if (lengthDiff !== 1) {
         return false;
     }
 
