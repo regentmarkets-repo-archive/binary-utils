@@ -36,11 +36,4 @@ describe('doTicksDifferJustOneEntry', () => {
         const result = doTicksDifferJustOneEntry(ticks1, ticks2);
         expect(result).to.equal(false);
     });
-
-    it('lists that are the same length but have offseted values, do differ one tick', () => {
-        const ticks1 = [{ epoch: 1 }, { epoch: 2 }, { epoch: 3 }];
-        const ticks2 = [{ epoch: 2 }, { epoch: 3 }, { epoch: 4 }];
-        const result = doTicksDifferJustOneEntry(ticks1, ticks2);
-        expect(result).to.equal(true);
-    });
 });
