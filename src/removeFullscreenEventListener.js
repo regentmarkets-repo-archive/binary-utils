@@ -3,4 +3,4 @@ export default handler => {
     document.removeEventListener('webkitfullscreenchange', handler);
     document.removeEventListener('mozfullscreenchange', handler);
     document.removeEventListener('MSFullscreenChange', handler);
-}
+};
