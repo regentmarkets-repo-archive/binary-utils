@@ -1,6 +1,6 @@
 {
   "name": "binary-utils",
-  "version": "3.10.0",
+  "version": "3.11.0",
   "description": "Utils for binary.com",
   "main": "lib/",
   "scripts": {

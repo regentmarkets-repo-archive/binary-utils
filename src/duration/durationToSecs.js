@@ -4,6 +4,6 @@ export default (duration, unit) => {
         case 'm': return 60 * duration;
         case 'h': return 3600 * duration;
         case 'd': return 86400 * duration;
-        default: return undefined;
+        default: throw new Error('Duration unit not valid');
     }
 };
