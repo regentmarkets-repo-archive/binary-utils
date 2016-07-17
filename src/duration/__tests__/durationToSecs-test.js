@@ -13,6 +13,10 @@ describe('durationToSecs', () => {
         expect(durationToSecs(100, 's')).to.equal(100);
     });
 
+    it('when unit is "t" treat input as seconds', () => {
+        expect(durationToSecs(123, 's')).to.equal(123);
+    });
+
     it('when unit is "m" treat input as minutes', () => {
         expect(durationToSecs(-1, 'm')).to.equal(-60);
         expect(durationToSecs(0, 'm')).to.equal(0);
