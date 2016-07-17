@@ -13,7 +13,7 @@ export default code => ({
 	entry_spot: 'Entry Spot',
 	entry_tick_time: 'Entry Spot Time',
 	sell_price: 'Sell Price',
-	payout: 'Payout',
+	payout: 'Potential Payout',
 	buy_price: 'Purchase Price',
 
 	barrier: 'Barrier',
