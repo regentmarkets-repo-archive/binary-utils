@@ -1,14 +1,17 @@
 const nullFunc = () => null;
-const analytics = (typeof window !== 'undefined' && window.ga) || nullFunc;
+const analytics = ga =>
+    ga || (typeof window !== 'undefined' && window.ga) || nullFunc;
 
-export const trackUserId = userId =>
-    analytics('set', 'userId', userId);
+export const trackUserId = (userId, ga) =>
+    analytics(ga)('set', 'userId', userId);
 
-export const trackRoute = route =>
-    analytics('send', 'pageview', route);
+export const trackRoute = (route, ga) =>
+    analytics(ga)('send', 'pageview', route);
 
-export const trackEvent = fields =>
-    analytics('send', {
+export const trackEvent = (category, action, label, ga) =>
+    analytics(ga)('send', {
         hitType: 'event',
-        ...fields,
+        eventCategory: category,
+        eventAction: action,
+        eventLabel: label,
     });
