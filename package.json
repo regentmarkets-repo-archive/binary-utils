@@ -1,13 +1,13 @@
 {
   "name": "binary-utils",
-  "version": "3.8.5",
+  "version": "3.14.0",
   "description": "Utils for binary.com",
   "main": "lib/",
   "scripts": {
     "build": "gulp",
     "prepublish": "npm run build",
-    "test": "mocha --compilers js:babel-core/register src/**/__tests__/*.js -R progress",
-    "test:coverage": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- src/**/__tests__/*.js",
+    "test": "mocha --compilers js:babel-core/register */__tests__/*.js ./src/*/__tests__/*.js -R progress",
+    "test:coverage": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- */__tests__/*.js ./src/*/__tests__/*.js",
     "test:coveralls": "npm run test:coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "test:eslint": "eslint",
     "test:full": "npm run test:eslint && npm run test:coveralls"
@@ -39,6 +39,7 @@
     "gulp-babel": "^6.1.2",
     "gulp-flatten": "^0.2.0",
     "immutable": "^3.8.1",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4"
   }
 }
