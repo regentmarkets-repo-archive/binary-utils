@@ -1,1 +1,1 @@
-export default alert;
+export default typeof alert !== 'undefined' ? alert : () => {};
