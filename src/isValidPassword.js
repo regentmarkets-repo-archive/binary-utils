@@ -1,2 +1,2 @@
-export default (pw1, pw2) =>
-    (pw1 === pw2) && (pw1.length > 6);
+export default password =>
+    /^[ -~]{6,25}$/.test(password);
