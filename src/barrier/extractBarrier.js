@@ -1,4 +1,4 @@
-import groupByKey from './groupByKey';
+import groupByKey from '../object/groupByKey';
 
 const extractDigitBarrierHelper = contractsGroupedByExpiry => {
     const expiryTypes = Object.keys(contractsGroupedByExpiry);
