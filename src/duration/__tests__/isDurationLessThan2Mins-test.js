@@ -1,12 +1,7 @@
 import { expect } from 'chai';
 import isDurationLessThan2Mins from '../isDurationLessThan2Mins';
 
-describe('isDurationTick', () => {
-    it('should return true when durationUnit is tick', ()=> {
-        const result = isDurationLessThan2Mins(null , 't');
-        expect(result).to.equal(true);
-    })
-
+describe('isDurationLessThan2Mins', () => {
     it('should return true when durationUnit is tick', ()=> {
         const result = isDurationLessThan2Mins(null , 't');
         expect(result).to.equal(true);
