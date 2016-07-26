@@ -1,5 +1,5 @@
 import durationUnits from './durationUnits';
-import splitSecsToUnits from './splitSecsToUnits';
+import splitSecsToUnits from '../date/splitSecsToUnits';
 
 export default (minInSecs, maxInSecs) => {
     // block is a structure that describe min and max of specific time unit

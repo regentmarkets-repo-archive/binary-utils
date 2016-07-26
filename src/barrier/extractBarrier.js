@@ -1,4 +1,4 @@
-import groupByKey from './groupByKey';
+import groupByKey from '../object/groupByKey';
 
 const extractDigitBarrierHelper = contractsGroupedByExpiry => {
     const expiryTypes = Object.keys(contractsGroupedByExpiry);
@@ -45,30 +45,34 @@ export default (contracts, type) => {
     const groupByExpiryType = groupByKey(contracts, 'expiry_type');
 
     switch (type) {
+        // types with 1 barrier
         case 'CALL':
             return extract1BarrierHelper(groupByExpiryType, 'Higher than');
         case 'PUT':
             return extract1BarrierHelper(groupByExpiryType, 'Lower than');
-        case 'ASIANU':
-        case 'ASIAND':
-            return undefined;
-        case 'DIGITMATCH':
-        case 'DIGITDIFF':
-            return extractDigitBarrierHelper(groupByExpiryType);
-        case 'DIGITODD':
-        case 'DIGITEVEN':
-            return undefined;
-        case 'DIGITOVER':
-        case 'DIGITUNDER':
-            return extractDigitBarrierHelper(groupByExpiryType);
+        case 'ONETOUCH':
+        case 'NOTOUCH':
+            return extract1BarrierHelper(groupByExpiryType, 'Touch spot');
+
+        // types with 2 barriers
         case 'EXPIRYMISS':
         case 'EXPIRYRANGE':
         case 'RANGE':
         case 'UPORDOWN':
             return extract2BarriersHelper(groupByExpiryType);
-        case 'ONETOUCH':
-        case 'NOTOUCH':
-            return extract1BarrierHelper(groupByExpiryType, 'Touch spot');
+
+        // special case: digit type
+        case 'DIGITMATCH':
+        case 'DIGITDIFF':
+        case 'DIGITOVER':
+        case 'DIGITUNDER':
+            return extractDigitBarrierHelper(groupByExpiryType);
+
+        // These types do not have barrier
+        case 'DIGITODD':
+        case 'DIGITEVEN':
+        case 'ASIANU':
+        case 'ASIAND':
         case 'SPREADU':
         case 'SPREADD':
             return undefined;
