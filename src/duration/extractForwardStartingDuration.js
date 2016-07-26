@@ -1,5 +1,5 @@
-import arrayToObject from './arrayToObject';
-import groupByKey from './groupByKey';
+import arrayToObject from '../array/arrayToObject';
+import groupByKey from '../object/groupByKey';
 import extractDurationHelper from './extractDurationHelper';
 
 export default (contracts, type) => {
