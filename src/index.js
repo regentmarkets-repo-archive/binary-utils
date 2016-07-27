@@ -113,7 +113,7 @@ export { default as Analytics } from './Analytics';
 export { default as brandColor } from './brandColor';
 export { default as directionClassName } from './directionClassName';
 export { default as errorToString } from './errorToString';
-export { default as exitFullScreen } from './exitFullScreen';
+export { default as exitFullscreen } from './exitFullscreen';
 export { default as getUniqueId } from './getUniqueId';
 export { default as isMobile } from './isMobile';
 export { default as isUserVirtual } from './isUserVirtual';
