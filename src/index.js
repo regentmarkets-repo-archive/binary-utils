@@ -68,7 +68,6 @@ export { default as noOfDecimals } from './number/noOfDecimals';
 export { default as numberToSignedString } from './number/numberToSignedString';
 export { default as pipSizeToStepSize } from './number/pipSizeToStepSize';
 export { default as pipsToDigits } from './number/pipsToDigits';
-export { default as stringIncrement } from './number/stringIncrement';
 export { default as toMoney } from './number/toMoney';
 
 export { default as filterDeep } from './object/filterDeep';
