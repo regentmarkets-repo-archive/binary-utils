@@ -77,7 +77,7 @@ export default (contracts, type) => {
         case 'SPREADD':
             return undefined;
         default: {
-            throw new Error(`Unknown trading type: ${type}`);
+            throw new Error(`Unknown trade type: ${type}`);
         }
     }
 };
