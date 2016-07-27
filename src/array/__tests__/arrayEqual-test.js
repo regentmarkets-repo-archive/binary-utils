@@ -1,32 +1,39 @@
-import arrayEqual from '../arrayEqual';
 import { expect } from 'chai';
+import arrayEqual from '../arrayEqual';
 
 describe('arrayEqual', () => {
-    it('Determine if two given arrays are not equal', () => {
-        const arr1 = [10,20,30, 500, -1];
-        const arr2 = [5,10,20, 100, -1];
-        const givenArray = arrayEqual(arr1, arr2);
-        expect(givenArray).to.equal(false);
-    });
-
-    it('Determine if two given equal arrays are equal', () => {
-        const arr1 = [10,20,30, 500, -1];
-        const arr2 = [10,20,30, 500, -1];
-        const givenArray = arrayEqual(arr1, arr2);
-        expect(givenArray).to.equal(true);
-    });
-
-     it('Determine if two empty arrays are equal', () => {
+     it('two empty arrays are equal', () => {
         const arr1 = [];
         const arr2 = [];
-        const givenArray = arrayEqual(arr1, arr2);
-        expect(givenArray).to.equal(true);
+        const result = arrayEqual(arr1, arr2);
+        expect(result).to.be.true;
     });
 
-     it('Determine if two arrays of different types are equal', () => {
-        const arr1 = [10,20,30, 500, -1];
-        const arr2 = ['10','20','30', '500', '-1'];
-        const givenArray = arrayEqual(arr1, arr2);
-        expect(givenArray).to.equal(false);
+    it('arrays with different lengths are different', () => {
+        const arr1 = [1, 2, 3];
+        const arr2 = [1, 2, 3, 4];
+        const result = arrayEqual(arr1, arr2);
+        expect(result).to.be.false;
+    });
+
+    it('arrays with different values are not equal', () => {
+        const arr1 = [1, 2, 3, 4, 5];
+        const arr2 = [6, 7, 8, 9, 10];
+        const result = arrayEqual(arr1, arr2);
+        expect(result).to.be.false;
+    });
+
+    it('arrays with different types are not equal', () => {
+        const arr1 = [1, 2, 3, 4, 5];
+        const arr2 = ['1', '2', '3', '4', '5'];
+        const result = arrayEqual(arr1, arr2);
+        expect(result).to.be.false;
+    });
+
+    it('arrays with each value equaling are equal', () => {
+        const arr1 = [1, '2', true, 4, -5];
+        const arr2 = [1, '2', true, 4, -5];
+        const result = arrayEqual(arr1, arr2);
+        expect(result).to.be.true;
     });
 });
