@@ -3,13 +3,13 @@ instrumentation:
   include-all-sources: true
   verbose: true
   excludes:
-    - src/index.js
+    - index.js
     - electron.js
-    - __tests__/*.js
     - array/__tests__/*.js
     - barrier/__tests__/*.js
     - date/__tests__/*.js
     - duration/__tests__/*.js
+    - misc/__tests__/*.js
     - number/__tests__/*.js
     - object/__tests__/*.js
     - ticks/__tests__/*.js
