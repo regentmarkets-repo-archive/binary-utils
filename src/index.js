@@ -71,7 +71,7 @@ export { default as pipsToDigits } from './number/pipsToDigits';
 export { default as stringIncrement } from './number/stringIncrement';
 export { default as toMoney } from './number/toMoney';
 
-export { default as filterObjectBy } from './object/filterObjectBy';
+export { default as filterDeep } from './object/filterDeep';
 export { default as findDeep } from './object/findDeep';
 export { default as groupByKey } from './object/groupByKey';
 export { default as immutableChildrenToJS } from './object/immutableChildrenToJS';
