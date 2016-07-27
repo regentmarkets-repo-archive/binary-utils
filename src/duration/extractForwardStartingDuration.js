@@ -1,4 +1,4 @@
-import arrayToObject from './arrayToObject';
+import arrayToObject from '../array/arrayToObject';
 import groupByKey from '../object/groupByKey';
 import extractDurationHelper from './extractDurationHelper';
 

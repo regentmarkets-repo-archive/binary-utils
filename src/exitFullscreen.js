@@ -8,4 +8,4 @@ export default () => {
     } else if (document.webkitExitFullscreen) {
         document.webkitExitFullscreen();
     }
-}
+};
