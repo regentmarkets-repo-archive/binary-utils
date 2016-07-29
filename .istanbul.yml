@@ -2,6 +2,17 @@ instrumentation:
   root: src
   include-all-sources: true
   verbose: true
-  excludes: ["**/__tests__/**" ,"./electron.js"]
+  excludes:
+    - index.js
+    - electron.js
+    - array/__tests__/*.js
+    - barrier/__tests__/*.js
+    - date/__tests__/*.js
+    - duration/__tests__/*.js
+    - misc/__tests__/*.js
+    - number/__tests__/*.js
+    - object/__tests__/*.js
+    - ticks/__tests__/*.js
+    - trade/__tests__/*.js
 reporting:
   dir: "coverage"

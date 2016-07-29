@@ -7,7 +7,6 @@ module.exports = wallaby => ({
         ignore: true,
     }],
     tests: [
-        'src/__tests__/*.js',
         'src/**/__tests__/*.js',
     ],
     env: {
