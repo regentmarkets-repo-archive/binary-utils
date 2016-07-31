@@ -7,6 +7,7 @@
  */
 export default (duration, durationUnit, range) => {
     const relatedBlock = range.find(r => r.unit === durationUnit);
+
     if (!relatedBlock) {
         return false;
     }

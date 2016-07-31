@@ -2,19 +2,33 @@ import { expect } from 'chai';
 import isDurationWithinRange from '../isDurationWithinRange';
 
 describe('isDurationWithinRange', () => {
-    it('should return true if duration is within range', () => {
-        const duration = '20';
+    it('is true if duration is within range', () => {
+        const duration = '50';
         const unit = 's';
         const range = [{ unit: 's', min: 10, max: 365 }];
 
-        expect(isDurationWithinRange(duration, unit, range)).to.be.true;
+        const result = isDurationWithinRange(duration, unit, range);
+
+        expect(result).to.be.true;
     });
 
-    it('should return false if duration is not within range', () => {
+    it('is false if duration is not within range', () => {
         const duration = '2000';
         const unit = 's';
         const range = [{ unit: 's', min: 10, max: 365 }];
 
-        expect(isDurationWithinRange(duration, unit, range)).to.be.false;
+        const result = isDurationWithinRange(duration, unit, range);
+
+        expect(result).to.be.false;
+    });
+
+    it('is false if duration unit does not match', () => {
+        const duration = '100';
+        const unit = 'm';
+        const range = [{ unit: 's', min: 10, max: 365 }];
+
+        const result = isDurationWithinRange(duration, unit, range);
+
+        expect(result).to.be.false;
     });
 });
