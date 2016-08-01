@@ -49,6 +49,9 @@ export { default as xMonthsAfter } from './date/xMonthsAfter';
 export { default as yesterdayEpoch } from './date/yesterdayEpoch';
 export { default as yesterdayString } from './date/yesterdayString';
 export { default as yesterdayUTCString } from './date/yesterdayUTCString';
+export { default as returnValidDate } from './date/returnValidDate';
+export { default as returnValidTime } from './date/returnValidTime';
+
 
 export { default as durationSecHelper } from './duration/durationSecHelper';
 export { default as durationText } from './duration/durationText';
@@ -122,3 +125,4 @@ export { default as requestFullscreen } from './misc/requestFullscreen';
 export { default as showError } from './misc/showError';
 export { default as timeLeftToNextRealityCheck } from './misc/timeLeftToNextRealityCheck';
 export { default as windowResizeEvent } from './misc/windowResizeEvent';
+
