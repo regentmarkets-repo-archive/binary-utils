@@ -4,7 +4,6 @@ import isValidTime from '../isValidTime';
 describe('isValidTime', () => {
     it('should return true when time is valid', () => {
         const validTime = isValidTime('24:59:12');
-        console.log('the time is', validTime);
         expect(!validTime).to.be.true;
     });
 
@@ -33,4 +32,3 @@ describe('isValidTime', () => {
         expect(!validTime).to.be.false;
     });
 });
-
