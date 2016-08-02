@@ -51,6 +51,7 @@ export { default as yesterdayString } from './date/yesterdayString';
 export { default as yesterdayUTCString } from './date/yesterdayUTCString';
 export { default as returnValidDate } from './date/returnValidDate';
 export { default as returnValidTime } from './date/returnValidTime';
+export { default as isValidTime } from './date/isValidTime';
 
 
 export { default as durationSecHelper } from './duration/durationSecHelper';
