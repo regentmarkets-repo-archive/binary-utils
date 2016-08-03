@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import extractForwardStartingDuration from '../extractForwardStartingDuration';
 import mockedContract from 'binary-test-data/contractsForR50';
+import extractForwardStartingDuration from '../extractForwardStartingDuration';
 
 describe('extractForwardStartingDuration', () => {
     it('should return object with shape of {range, option}', () => {
@@ -18,9 +18,21 @@ describe('extractForwardStartingDuration', () => {
         expect(forwardDuration.range[0]).to.contains.keys(['open', 'close', 'date']);
     });
 
-    it('should return undefined if type not found', () =>{
-        const duration = extractForwardStartingDuration(mockedContract, 'CALLA');
+    it('should return undefined if type not found', () => {
+        const duration = extractForwardStartingDuration(mockedContract, 'UNKNOWN TYPE');
         expect(duration).to.be.undefined;
     });
-});
 
+    it('exception is thrown if two contracts forward starting for same type', () => {
+        const contractFor = [{
+            contract_type: 'CALL',
+            forward_starting_options: [],
+        }, {
+            contract_type: 'CALL',
+            forward_starting_options: [],
+        }];
+        expect(() =>
+            extractForwardStartingDuration(contractFor, 'CALL')
+        ).to.throw(/forward starting/);
+    });
+});
