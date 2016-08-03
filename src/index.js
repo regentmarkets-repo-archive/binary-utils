@@ -52,7 +52,7 @@ export { default as yesterdayUTCString } from './date/yesterdayUTCString';
 export { default as returnValidDate } from './date/returnValidDate';
 export { default as returnValidTime } from './date/returnValidTime';
 export { default as isValidTime } from './date/isValidTime';
-
+export { default as timeLeftToNextRealityCheck } from './date/timeLeftToNextRealityCheck';
 
 export { default as durationSecHelper } from './duration/durationSecHelper';
 export { default as durationText } from './duration/durationText';
@@ -124,6 +124,4 @@ export { default as isValidPassword } from './misc/isValidPassword';
 export { default as removeFullscreenEventListener } from './misc/removeFullscreenEventListener';
 export { default as requestFullscreen } from './misc/requestFullscreen';
 export { default as showError } from './misc/showError';
-export { default as timeLeftToNextRealityCheck } from './misc/timeLeftToNextRealityCheck';
 export { default as windowResizeEvent } from './misc/windowResizeEvent';
-
