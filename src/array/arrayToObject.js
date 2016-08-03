@@ -1,11 +1,11 @@
-export default arr => {
-    const obj = {};
-    arr.forEach(ele => {
-        Object.keys(ele)
-            .forEach(k =>
-                Array.isArray(obj[k]) ?
-                    obj[k].push(ele[k]) :
-                    obj[k] = [ele[k]]);
-    });
-    return obj;
-};
+export default arr =>
+    arr.reduce((obj, x) => {
+        Object.keys(x).forEach(key => {
+            if (Array.isArray(obj[key])) {
+                obj[key].push(x[key]);
+            } else {
+                obj[key] = [x[key]];
+            }
+        });
+        return obj;
+    }, {});
