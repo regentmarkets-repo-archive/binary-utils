@@ -19,14 +19,14 @@ describe('doCandlesDifferJustOneEntry', () => {
     it('a list that differs more than one item length do not differ one candle', () => {
         const candles1 = [{ epoch: 1 }];
         const candles2 = [{ epoch: 1 }, { epoch: 2 }, { epoch: 3 }];
-        const result = doCandlesDifferJustOneEntry(ticks1, ticks2);
+        const result = doCandlesDifferJustOneEntry(candles1, candles2);
         expect(result).to.be.false;
     });
 
     it('lists that differ one item and content is offset by one, do differ one candle', () => {
         const candles1 = [{ epoch: 1 }, { epoch: 2 }];
         const candles2 = [{ epoch: 1 }, { epoch: 2 }, { epoch: 3 }];
-        const result = doCandlesDifferJustOneEntry(ticks1, ticks2);
+        const result = doCandlesDifferJustOneEntry(candles1, candles2);
         expect(result).to.be.true;
     });
 
