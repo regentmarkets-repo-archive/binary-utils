@@ -8,4 +8,4 @@ export default elem => {
     } else if (elem.webkitRequestFullscreen) {
         elem.webkitRequestFullscreen();
     }
-}
+};

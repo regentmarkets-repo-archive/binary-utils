@@ -3,13 +3,13 @@ import groupByKey from '../object/groupByKey';
 import extractDurationHelper from './extractDurationHelper';
 
 export default (contracts, type) => {
-    const forwardStartingContracts = contracts.filter(c => !!c.forward_starting_options);
+    const forwardStartingContracts = contracts.filter(c => !!c.forward_starting_options && c.contract_type === type);
     if (forwardStartingContracts.length === 0) {
         return undefined;
     }
 
     if (forwardStartingContracts.length > 1) {
-        throw new Error('Assumption broken, more than one contract with forward starting options');
+        throw new Error('Can not have more than one contract with forward starting options');
     }
 
     const forwardOptions = forwardStartingContracts[0].forward_starting_options;

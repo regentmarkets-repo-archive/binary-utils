@@ -1,2 +1,2 @@
 export default arr =>
-    Math.min.apply(Math, arr);
+    Math.min(...arr);

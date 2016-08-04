@@ -3,7 +3,7 @@ import isValidTime from '../isValidTime';
 
 describe('isValidTime', () => {
     it('should return true when time is valid', () => {
-        const validTime = isValidTime('24:59:12');
+        const validTime = isValidTime('23:59:12');
         expect(!validTime).to.be.true;
     });
 

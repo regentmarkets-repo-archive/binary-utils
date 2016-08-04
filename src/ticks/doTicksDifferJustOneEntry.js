@@ -18,7 +18,7 @@ export default (ticks1, ticks2) => {
     if (lengthDiff > 1) {
         return false;
     }
-    
+
     return doTicksEqual(ticks1[ticks1.length - 1], ticks2[ticks2.length - 2])
         || doTicksEqual(ticks1[ticks1.length - 2], ticks2[ticks2.length - 1]);
 };

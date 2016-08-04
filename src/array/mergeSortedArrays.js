@@ -1,10 +1,13 @@
+const getVal = (getter = x => x, arr, i) =>
+    arr[i] ? getter(arr[i]) : Number.MAX_VALUE;
+
 export default (arr1, arr2, getter1, getter2) => {
     let i1 = 0;
     let i2 = 0;
-    let result = [];
+    const result = [];
     while (i1 < arr1.length || i2 < arr2.length) {
-        const val1 = arr1[i1] ? (getter1 ? getter1(arr1[i1]) : arr1[i1]) : Number.MAX_VALUE;
-        const val2 = arr2[i2] ? (getter2 ? getter2(arr2[i2]) : arr2[i2]) : Number.MAX_VALUE;
+        const val1 = getVal(getter1, arr1, i1);
+        const val2 = getVal(getter2, arr2, i2);
         if (val1 < val2) {
             result.push(arr1[i1]);
             i1++;
