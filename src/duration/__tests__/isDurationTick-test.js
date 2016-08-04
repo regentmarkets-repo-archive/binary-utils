@@ -7,11 +7,11 @@ describe('isDurationTick', () => {
     })
 
      it('should return false where duration is not tick', () => {
-        expect(isDurationTick('s')).to.equal(false);
+        expect(isDurationTick('s')).to.be.false;
     })
 
      it('should return true where duration is tick', () => {
-        expect(isDurationTick('t')).to.equal(true);
+        expect(isDurationTick('t')).to.be.true;
     })
 });
 
