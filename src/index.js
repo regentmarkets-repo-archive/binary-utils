@@ -101,7 +101,6 @@ export { default as contractCodeToText } from './trade/contractCodeToText';
 export { default as extractSpreadInfo } from './trade/extractSpreadInfo';
 export { default as isIntraday } from './trade/isIntraday';
 export { default as normalizedContractFor } from './trade/normalizedContractFor';
-export { default as returnPercentageFromProposal } from './trade/returnPercentageFromProposal';
 export { default as tradeToFriendlyType } from './trade/tradeToFriendlyType';
 export { default as tradeTypeCodeToText } from './trade/tradeTypeCodeToText';
 export { default as tradeTypeTextToCode } from './trade/tradeTypeTextToCode';
