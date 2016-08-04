@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import normalizedContractFor from '../normalizedContractFor';
 import mockedContract from 'binary-test-data/contractsForGDAXI';
+import normalizedContractFor from '../normalizedContractFor';
 
 describe('normalizedContractFor', () => {
     it('accept a list ', () => {
@@ -24,4 +24,3 @@ describe('normalizedContractFor', () => {
         expect(normalized.callput.CALL).to.have.lengthOf(4);
     });
 });
-

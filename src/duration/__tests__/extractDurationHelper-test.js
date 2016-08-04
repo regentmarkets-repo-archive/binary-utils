@@ -5,7 +5,7 @@ import normalizedContractFor from '../../trade/normalizedContractFor';
 
 describe('extractDurationHelper', () => {
     const normalized = normalizedContractFor(contractsForR50);
-
+    
     it('should return empty array for spreads as spreads does not have duration', () => {
         const durationsForSpread = extractDurationHelper(normalized.spreads.SPREADU, 'SPREAD');
         expect(durationsForSpread).be.empty;
