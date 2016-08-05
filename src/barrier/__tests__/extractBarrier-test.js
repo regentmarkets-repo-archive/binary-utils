@@ -8,14 +8,23 @@ describe('extractBarrier', () => {
 
     it('unknown type throws', () => {
         expect(() =>
-            extractBarrier(normalized.callput.CALL, 'nonexisting')
+            extractBarrier(normalized.risefall.CALL, 'nonexisting')
         ).to.throw();
     });
 
-    describe('CALL type', () => {
-        const callBarrier = extractBarrier(normalized.callput.CALL, 'CALL');
+    describe('RISE FALL type', () => {
+        const callBarrier = extractBarrier(normalized.risefall.CALL, 'CALL');
+
+        it('should not have barrier', () => {
+            expect(callBarrier).to.deep.equal({});
+        });
+    });
+
+    describe('HIGHER LOWER type', () => {
+        const callBarrier = extractBarrier(normalized.higherlower.CALL, 'CALL');
 
         it('should return contract per expiry type {daily | intraday}', () => {
+            expect(callBarrier).to.include.keys('tick');
             expect(callBarrier).to.include.keys('daily');
             expect(callBarrier).to.include.keys('intraday');
         });
@@ -28,15 +37,6 @@ describe('extractBarrier', () => {
         it('should return number as default barrier value', () => {
             const intraday = callBarrier.intraday;
             expect(+intraday[0].defaultValue).to.not.be.NaN;
-        });
-    });
-
-    describe('PUT type', () => {
-        const callBarrier = extractBarrier(normalized.callput.PUT, 'PUT');
-
-        it('should return contract per expiry type {daily | intraday}', () => {
-            expect(callBarrier).to.include.keys('daily');
-            expect(callBarrier).to.include.keys('intraday');
         });
     });
 
@@ -123,12 +123,10 @@ describe('extractBarrier', () => {
         });
     });
 
-    describe('ASIAN and SPREAD', () => {
+    describe('ASIAN', () => {
         const asianBarrier = extractBarrier(normalized.asian.ASIANU, 'ASIANU');
-        const spreadBarrier = extractBarrier(normalized.spreads.SPREADU, 'SPREADU');
         it('does not have barrier', () => {
             expect(asianBarrier).to.be.undefined;
-            expect(spreadBarrier).to.be.undefined;
         });
     });
 });
