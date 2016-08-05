@@ -9,5 +9,5 @@ describe('dateToTimeString', () => {
         const expectedTime = newDate.slice(11, 19);
         expect(givenTime).to.equal(expectedTime);
         expect(expectedTime).to.equal('11:38:08');
-    })
-})
+    });
+});

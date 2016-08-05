@@ -6,5 +6,5 @@ describe('monthsAfterStr', () => {
         const newDate = xMonthsAfter(20);
         const thisMonth = (new Date()).getMonth();
         expect((thisMonth + 20) % 12).to.equal(newDate.getMonth());
-    })
-})
+    });
+});

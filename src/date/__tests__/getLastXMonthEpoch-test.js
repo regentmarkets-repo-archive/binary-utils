@@ -9,5 +9,5 @@ describe('getLastXMonthEpoch', () => {
         theDate.setMonth(theDate.getMonth() - x);
         const expectedEpoch = Math.floor(theDate.getTime() / 1000);
         expect(expectedEpoch).to.equal(givenEpoch);
-    })
-})
+    });
+});

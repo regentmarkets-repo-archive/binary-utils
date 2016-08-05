@@ -8,5 +8,5 @@ describe('epochToDate', () => {
         const givenDate = epochToDate(epoch).toDateString();
         const expectedDate = new Date(epoch * 1000).toDateString();
         expect(givenDate).to.equal(expectedDate);
-    })
-})
+    });
+});

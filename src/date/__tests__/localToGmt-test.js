@@ -1,11 +1,11 @@
-import LocalToGmt from '../LocalToGmt';
 import { expect } from 'chai';
+import localToGmt from '../localToGmt';
 
-describe('LocalToGmt', () =>{
+describe('localToGmt', () => {
     it('should convert local to gmt Date', () => {
         const theDate = new Date();
         const expectedDate = new Date(theDate + (theDate.getTimezoneOffset() * 60 * 1000));
-        const givenDate = LocalToGmt(theDate);
+        const givenDate = localToGmt(theDate);
         expect(givenDate.toDateString()).to.equal(expectedDate.toDateString());
-    })
-})
+    });
+});

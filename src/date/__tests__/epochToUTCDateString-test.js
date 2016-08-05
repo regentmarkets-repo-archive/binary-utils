@@ -8,5 +8,5 @@ describe('epochToUTCDateString', () => {
         const givenDate = epochToUTCDateString(epoch);
         const expectedDate = new Date(epoch * 1000).toISOString().slice(0, 10);
         expect(givenDate).to.equal(expectedDate);
-    })
-})
+    });
+});
