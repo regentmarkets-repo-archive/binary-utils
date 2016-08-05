@@ -107,17 +107,18 @@ export { default as tradeTypeTextToCode } from './trade/tradeTypeTextToCode';
 export { default as tradeTypes } from './trade/tradeTypes';
 export { default as typeHasBarrier } from './trade/typeHasBarrier';
 
-export { default as addFullscreenEventListener } from './misc/addFullscreenEventListener';
 export { default as Analytics } from './misc/Analytics';
 export { default as brandColor } from './misc/brandColor';
 export { default as directionClassName } from './misc/directionClassName';
 export { default as errorToString } from './misc/errorToString';
-export { default as exitFullscreen } from './misc/exitFullscreen';
 export { default as getUniqueId } from './misc/getUniqueId';
 export { default as isMobile } from './misc/isMobile';
 export { default as isValidEmail } from './misc/isValidEmail';
 export { default as isValidPassword } from './misc/isValidPassword';
-export { default as removeFullscreenEventListener } from './misc/removeFullscreenEventListener';
-export { default as requestFullscreen } from './misc/requestFullscreen';
-export { default as showError } from './misc/showError';
-export { default as windowResizeEvent } from './misc/windowResizeEvent';
+
+export { default as addFullscreenEventListener } from './dom/addFullscreenEventListener';
+export { default as exitFullscreen } from './dom/exitFullscreen';
+export { default as removeFullscreenEventListener } from './dom/removeFullscreenEventListener';
+export { default as requestFullscreen } from './dom/requestFullscreen';
+export { default as showError } from './dom/showError';
+export { default as windowResizeEvent } from './dom/windowResizeEvent';
