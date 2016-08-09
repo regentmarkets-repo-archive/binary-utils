@@ -10,5 +10,5 @@ describe('xDayEpoch', () => {
         const expectedDate = epoch + secsAway;
         expect(new Date(givenDate).getDay()).to.equal(new Date(expectedDate).getDay());
         expect(expectedDate - epoch).to.equal(3 * 60 * 60 * 24);
-    })
-})
+    });
+});
