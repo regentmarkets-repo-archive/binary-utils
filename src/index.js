@@ -120,5 +120,6 @@ export { default as addFullscreenEventListener } from './dom/addFullscreenEventL
 export { default as exitFullscreen } from './dom/exitFullscreen';
 export { default as removeFullscreenEventListener } from './dom/removeFullscreenEventListener';
 export { default as requestFullscreen } from './dom/requestFullscreen';
+export { default as showInfo } from './dom/showInfo';
 export { default as showError } from './dom/showError';
 export { default as windowResizeEvent } from './dom/windowResizeEvent';
