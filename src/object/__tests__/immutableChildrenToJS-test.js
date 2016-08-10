@@ -3,23 +3,23 @@ import { fromJS } from 'immutable';
 import immutableChildrenToJS from '../immutableChildrenToJS';
 
 describe('immutableChildrenToJS', () => {
-    it('should throw when passed undefined', () => {
-        expect(() => immutableChildrenToJS()).to.throw();
+    it('returns undefined when no parameters', () => {
+        expect(immutableChildrenToJS()).to.equal(undefined);
     });
 
-    it('should return empty object with empty input', () => {
+    it('returns empty object with empty input', () => {
         const obj = {};
         const actual = immutableChildrenToJS(obj);
         expect(obj).to.deep.equal(actual);
     });
 
-    it('should return new object, and not transform the input parameter', () => {
+    it('returns new object, and does not transform the input parameter', () => {
         const obj = {};
         const actual = immutableChildrenToJS(obj);
         expect(obj).to.not.equal(actual);
     });
 
-    it('should return the same object if it has no immutable children', () => {
+    it('returns the same object if it has no immutable children', () => {
         const obj = {
             someProp: 'someVal',
             anotherProp: 123,
@@ -28,7 +28,7 @@ describe('immutableChildrenToJS', () => {
         expect(obj).to.deep.equal(actual);
     });
 
-    it('should transform immutable children of plain object', () => {
+    it('transforms immutable children of plain object', () => {
         const expected = {
             someObj: {
                 someProp: 'someVal',
