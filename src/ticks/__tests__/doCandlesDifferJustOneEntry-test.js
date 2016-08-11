@@ -31,16 +31,16 @@ describe('doCandlesDifferJustOneEntry', () => {
     });
 
     it('lists that differ one item but content is not offset by one, do not differ one candle', () => {
-        const ticks1 = [{ epoch: 2 }, { epoch: 1 }];
-        const ticks2 = [{ epoch: 1 }, { epoch: 2 }, { epoch: 3 }];
-        const result = doCandlesDifferJustOneEntry(ticks1, ticks2);
+        const candle1 = [{ epoch: 2 }, { epoch: 1 }];
+        const candle2 = [{ epoch: 1 }, { epoch: 2 }, { epoch: 3 }];
+        const result = doCandlesDifferJustOneEntry(candle1, candle2);
         expect(result).to.be.false;
     });
 
     it('lists that are the same length but have offseted values, do differ one candle', () => {
-        const ticks1 = [{ epoch: 1 }, { epoch: 2 }, { epoch: 3 }];
-        const ticks2 = [{ epoch: 2 }, { epoch: 3 }, { epoch: 4 }];
-        const result = doCandlesDifferJustOneEntry(ticks1, ticks2);
+        const candle1 = [{ epoch: 1 }, { epoch: 2 }, { epoch: 3 }];
+        const candle2 = [{ epoch: 2 }, { epoch: 3 }, { epoch: 4 }];
+        const result = doCandlesDifferJustOneEntry(candle1, candle2);
         expect(result).to.be.true;
     });
 });
