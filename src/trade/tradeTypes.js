@@ -1,11 +1,3 @@
-type TradeType = {
-	value: string,
-	text: string,
-	img: string,
-	ticks: boolean,
-	barrier?: boolean,
-};
-
 export default [
 	{ value: 'CALL', text: 'Rise', img: 'img/trade-call.svg', ticks: true, barrier: false },
 	{ value: 'PUT', text: 'Fall', img: 'img/trade-put.svg', ticks: true, barrier: false },
