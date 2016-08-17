@@ -17,11 +17,11 @@ const blockIsValid = (minArg: number, maxArg: number, unit: DurationUnit): boole
     }
 };
 
-export default (minInSecs: number, maxInSecs: number): number[] => {
+export default (minInSecs: number, maxInSecs: number): any[] => {
     const minInUnits = splitSecsToUnits(minInSecs);
     const maxInUnits = splitSecsToUnits(maxInSecs);
 
-    const durations = [];
+    const durations: any[] = [];
     for (let i = 0; i < minInUnits.length; i++) {
         const unit = durationUnits[i + 1];
         const minI = minInUnits[i];

@@ -21,6 +21,20 @@ export type Contract = {
     entry_spot: number,
 };
 
+export type SpreadContract = {
+    amount_per_point: number,
+    stop_type: 'dollar' | 'point',
+    stop_profit: number,
+    stop_loss: number,
+};
+
+export type PrettySpreadContract = {
+    amountPerPoint: number,
+    stopType: 'dollar' | 'point',
+    stopProfit: number,
+    stopLoss: number,
+};
+
 export type ExtendedContract = {
     contract_type: string,
     barrierType: number,

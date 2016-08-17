@@ -9,6 +9,12 @@
 .*/__tests__
 
 
+.*/sequence.js
+.*/extractDuration.js
+.*/extractDurationHelper.js
+.*/normalizedContractFor.js
+.*/extractForwardStartingDuration.js
+
 [include]
 
 [libs]

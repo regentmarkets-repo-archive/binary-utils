@@ -1,4 +1,2 @@
-import gmtToLocal from './gmtToLocal';
-
 export default (date: Date): string =>
-    gmtToLocal(date).toISOString();
+    (new Date(date - date.getTimezoneOffset() * 60 * 1000)).toISOString();

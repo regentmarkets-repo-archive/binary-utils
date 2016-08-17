@@ -1,4 +1,6 @@
-export default (arr1: any[], arr2: any[], eq = (a, b) => a === b): boolean => {
+type Comparator = (a: any, b: any) => boolean;
+
+export default (arr1: any[], arr2: any[], eq: Comparator = (a, b) => a === b): boolean => {
     const len1 = arr1.length;
     const len2 = arr2.length;
     const lengthDiff = Math.abs(len1 - len2);

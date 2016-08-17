@@ -1,8 +1,8 @@
-import type { Contract, ContractType } from '../types';
+import type { ExtendedContract, ContractType } from '../types';
 import durationSecHelper from './durationSecHelper';
 import extractMinMaxInUnits from './extractMinMaxInUnits';
 
-export default (contracts: Contract[], type: ContractType): Contract[] => {
+export default (contracts: ExtendedContract[], type: ContractType): ExtendedContract[] => {
     if (type.indexOf('SPREAD') > -1) {
         return [];
     }

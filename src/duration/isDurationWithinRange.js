@@ -1,7 +1,7 @@
 import type { DurationUnit, Range } from '../types';
 
-export default (duration: number, durationUnit: DurationUnit, range: Range): boolean => {
-    const relatedBlock = range.find(r => r.unit === durationUnit);
+export default (duration: number, durationUnit: DurationUnit, ranges: Range[]): boolean => {
+    const relatedBlock = ranges.find(r => r.unit === durationUnit);
 
     if (!relatedBlock) {
         return false;

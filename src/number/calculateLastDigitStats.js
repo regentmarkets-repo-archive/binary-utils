@@ -2,7 +2,7 @@ import getLastDigit from './getLastDigit';
 import type { Tick } from '../types';
 
 export default (ticks: Tick[], pips: number): number[] =>
-    ticks.reduce((acc: Tick[], x: Tick) => {
+    ticks.reduce((acc: number[], x: Tick) => {
         const digit = getLastDigit(x.quote, pips);
         acc[digit]++;
         return acc;
