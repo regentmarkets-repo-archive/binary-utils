@@ -1,4 +1,4 @@
 import dateToDateString from './dateToDateString';
 
-export default () =>
+export default (): string =>
     dateToDateString(new Date());

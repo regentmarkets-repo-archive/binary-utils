@@ -1,4 +1,4 @@
-export default secs => {
+export default (secs: number): string => {
     const days = Math.floor(secs / 60 / 60 / 24);
     const hours = Math.floor(secs % (60 * 60 * 24) / (60 * 60));
     const minutes = Math.floor(secs % (60 * 60) / 60);

@@ -1,3 +1,3 @@
 import xDayEpoch from './xDayEpoch';
 
-export default () => xDayEpoch(-6);
+export default (): number => xDayEpoch(-6);

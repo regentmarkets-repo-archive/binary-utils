@@ -1,6 +1,7 @@
+import type { Contract } from '../types';
 import relativeBarrier from './relativeBarrier';
 
-export default (contract, lastTick) =>
+export default (contract: Contract, lastTickQuote: number): number =>
     contract.barrier ?
-        relativeBarrier(contract, lastTick) :
-        +contract.entry_spot || lastTick;
+        relativeBarrier(contract, lastTickQuote) :
+        +contract.entry_spot || lastTickQuote;

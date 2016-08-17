@@ -1,2 +1,2 @@
-export default arr =>
+export default (arr: any[]): number =>
     Math.max(...arr);

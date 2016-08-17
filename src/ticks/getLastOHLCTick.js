@@ -1,2 +1,4 @@
-export default ticks =>
-    ticks && (ticks.length === 0 ? undefined : +(ticks[ticks.length - 1].close));
+import type { Candle } from '../types';
+
+export default (candles: Candle[]): ?number =>
+    candles && (candles.length === 0 ? undefined : +(candles[candles.length - 1].close));

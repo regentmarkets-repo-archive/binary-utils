@@ -1,4 +1,3 @@
-
 // it's basically a zip + map, but I do not find we need it much, so no need to generalize
 export default history =>
     history.times.map((t, idx) => {

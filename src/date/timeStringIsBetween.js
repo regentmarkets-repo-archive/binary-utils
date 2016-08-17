@@ -1,7 +1,7 @@
 import timeStringBigger from './timeStringBigger';
 import timeStringSmaller from './timeStringSmaller';
 
-export default (start, end, target) => {
+export default (start: string, end: string, target: string): boolean => {
     if (timeStringBigger(end, start)) {
         return timeStringBigger(target, start) && timeStringSmaller(target, end);
     }

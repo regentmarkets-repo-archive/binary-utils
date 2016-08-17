@@ -1,4 +1,4 @@
-export default (a, b) => {
+export default (a: string, b: string): boolean => {
     const aH = +a.slice(0, 2);
     const aM = +a.slice(3, 5);
     const aS = +a.slice(6);

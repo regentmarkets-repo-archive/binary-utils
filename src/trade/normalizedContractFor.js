@@ -1,6 +1,7 @@
+import type { Contract } from '../types';
 import groupByKey from '../object/groupByKey';
 
-export default contracts => {
+export default (contracts: Contract[]) => {
     const extraRemoved = contracts.map(contract => ({
         amount_per_point: contract.amount_per_point,
         barrier: contract.barrier,

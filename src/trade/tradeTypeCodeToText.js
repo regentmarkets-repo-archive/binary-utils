@@ -1,4 +1,5 @@
+import type { ContractType } from '../types';
 import tradeTypes from './tradeTypes';
 
-export default code =>
+export default (code: ContractType): string =>
     tradeTypes.find(x => x.value === code).text;

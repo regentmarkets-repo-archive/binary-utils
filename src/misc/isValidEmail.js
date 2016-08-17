@@ -1,2 +1,2 @@
-export default email =>
+export default (email: string): boolean =>
     /\S+@\S+\.\S+/.test(email);

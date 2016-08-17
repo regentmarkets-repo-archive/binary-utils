@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import localToGmt from '../localToGmt';
 
 describe('localToGmt', () => {
-    it('should convert local to gmt Date', () => {
+    it('should convert local to GMT Date', () => {
         const theDate = new Date();
         const expectedDate = new Date(theDate + (theDate.getTimezoneOffset() * 60 * 1000));
         const givenDate = localToGmt(theDate);

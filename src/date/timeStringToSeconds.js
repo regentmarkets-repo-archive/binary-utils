@@ -1,5 +1,5 @@
-// only supported format = "09:20", seconds are not supported
-export default timeString => {
+// only supported format = "hh:mm", seconds are not supported
+export default (timeString: string): number => {
     const h = +timeString.slice(0, 2);
     const m = +timeString.slice(3, 5);
 

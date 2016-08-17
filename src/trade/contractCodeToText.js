@@ -1,4 +1,4 @@
-export default code => ({
+export default (code: string): string => ({
 	contract_id: 'Contract ID',
 	purchase_time: 'Purchase Time',
 	ask_price: 'Ask Price',

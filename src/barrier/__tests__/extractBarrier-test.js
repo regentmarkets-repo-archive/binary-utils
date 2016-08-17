@@ -1,7 +1,7 @@
 import { expect } from 'chai';
+import contracts from 'binary-test-data/contractsForR50';
 import extractBarrier from '../extractBarrier';
 import normalizedContractFor from '../../trade/normalizedContractFor';
-import contracts from 'binary-test-data/contractsForR50';
 
 describe('extractBarrier', () => {
     const normalized = normalizedContractFor(contracts);

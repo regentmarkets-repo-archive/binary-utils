@@ -1,2 +1,2 @@
-export default () =>
+export default (): boolean =>
     typeof window !== 'undefined' && /Mobile/.test(window.navigator.userAgent);

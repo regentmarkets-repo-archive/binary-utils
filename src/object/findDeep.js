@@ -4,7 +4,7 @@
  * @param predicate     (object, index) => true|false
  * @returns {boolean}
  */
-const findDeep = (obj, predicate) => {
+const findDeep = (obj: any, predicate: (child: any, k: any) => boolean) => {
     if (typeof obj !== 'object' || obj === null || obj === undefined) {
         return false;
     }

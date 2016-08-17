@@ -1,1 +1,2 @@
-export default date => !isNaN(date.getTime());
+export default (date: Date): boolean => 
+    !isNaN(date.getTime());

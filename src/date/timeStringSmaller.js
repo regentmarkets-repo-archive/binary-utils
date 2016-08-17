@@ -1,6 +1,6 @@
 import timeStringBigger from './timeStringBigger';
 
-export default (a, b) => {
+export default (a: string, b: string): boolean => {
     if (a === b) {
         return false;
     }

@@ -1,4 +1,6 @@
-export default (duration, unit) => {
+import type { DurationUnit } from '../types';
+
+export default (duration: number, unit: DurationUnit): number => {
     switch (unit) {
         case 't':
         case 's': return duration;

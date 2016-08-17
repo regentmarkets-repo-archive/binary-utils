@@ -1,4 +1,4 @@
-export default category => ({
+export default (category: string): string => ({
     callput: 'Up/Down',
     risefall: 'Rise/Fall',
     higherlower: 'Higher/Lower',

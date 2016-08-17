@@ -1,4 +1,4 @@
-export default time =>
+export default (time: string): boolean =>
     time.split(':').map((val, ind) => {
         switch (ind) {
             case 0: return parseInt(val, 0) < 24;

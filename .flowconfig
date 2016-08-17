@@ -1,0 +1,16 @@
+[ignore]
+.*/Gulpfile.js
+.*/wallaby.conf.js
+.*/node_modules/*
+.*/coverage
+.*/lib
+.*/index.js
+.*/addFullscreenEventListener.js
+.*/__tests__
+
+
+[include]
+
+[libs]
+
+[options]

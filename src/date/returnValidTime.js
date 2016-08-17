@@ -1,4 +1,4 @@
-export default (inputValue, bridge) =>
+export default (inputValue: string, bridge: string): string =>
 	inputValue.split(bridge).map(obj => {
         switch (obj.length) {
             case 0: return '00';

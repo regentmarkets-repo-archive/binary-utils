@@ -1,4 +1,4 @@
-export default (arr, key) => {
+export default (arr: any[], key: string): any[] => {
     const result = {};
     arr.forEach(ele => {
         const kv = ele[key];

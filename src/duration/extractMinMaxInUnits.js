@@ -1,8 +1,9 @@
+import type { DurationUnit } from '../types';
 import durationUnits from './durationUnits';
 import splitSecsToUnits from '../date/splitSecsToUnits';
 
 // block is a structure that describes min and max of specific time unit
-const blockIsValid = (minArg, maxArg, unit) => {
+const blockIsValid = (minArg: number, maxArg: number, unit: DurationUnit): boolean => {
     if (maxArg <= 1) {
         return false;
     }
@@ -16,7 +17,7 @@ const blockIsValid = (minArg, maxArg, unit) => {
     }
 };
 
-export default (minInSecs, maxInSecs) => {
+export default (minInSecs: number, maxInSecs: number): number[] => {
     const minInUnits = splitSecsToUnits(minInSecs);
     const maxInUnits = splitSecsToUnits(maxInSecs);
 

@@ -1,4 +1,4 @@
-export default (arr1, arr2, eq = (a, b) => a === b) => {
+export default (arr1: any[], arr2: any[], eq = (a, b) => a === b): boolean => {
     const len1 = arr1.length;
     const len2 = arr2.length;
     const lengthDiff = Math.abs(len1 - len2);

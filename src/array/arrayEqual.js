@@ -1,4 +1,4 @@
-export default (a, b) => {
+export default (a: any[], b: any[]): boolean => {
     if (a.length !== b.length) {
         return false;
     }

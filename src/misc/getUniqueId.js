@@ -1,2 +1,2 @@
 let uniqueId = 0;
-export default () => uniqueId++;
+export default (): number => uniqueId++;

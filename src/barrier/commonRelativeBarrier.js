@@ -1,2 +1,2 @@
-export default (barrier, entrySpot, lastTick) =>
-    +barrier + (+entrySpot || lastTick);
+export default (barrier: ?number, entrySpot: number, lastTickQuote: number) =>
+    +barrier + (+entrySpot || lastTickQuote);

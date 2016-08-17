@@ -1,6 +1,7 @@
+import type { Contract, ContractType } from '../types';
 import groupByKey from '../object/groupByKey';
 
-const extractDigitBarrierHelper = contractsGroupedByExpiry => {
+const extractDigitBarrierHelper = (contractsGroupedByExpiry: any): any => {
     const expiryTypes = Object.keys(contractsGroupedByExpiry);
     const result = {};
     expiryTypes.forEach(et => {
@@ -14,7 +15,7 @@ const extractDigitBarrierHelper = contractsGroupedByExpiry => {
     return result;
 };
 
-const extract2BarriersHelper = contractsGroupedByExpiry => {
+const extract2BarriersHelper = (contractsGroupedByExpiry: any): any => {
     const expiryTypes = Object.keys(contractsGroupedByExpiry);
     const result = {};
     expiryTypes.forEach(et => {
@@ -27,7 +28,7 @@ const extract2BarriersHelper = contractsGroupedByExpiry => {
     return result;
 };
 
-const extract1BarrierHelper = (contractGroupedByExpiry, barrierName) => {
+const extract1BarrierHelper = (contractGroupedByExpiry: any, barrierName: string): any => {
     const expiryTypes = Object.keys(contractGroupedByExpiry);
     const result = {};
     expiryTypes.forEach(et => {
@@ -41,7 +42,7 @@ const extract1BarrierHelper = (contractGroupedByExpiry, barrierName) => {
     return result;
 };
 
-export default (contracts, type) => {
+export default (contracts: Contract[], type: ContractType): ?number => {
     const groupByExpiryType = groupByKey(contracts, 'expiry_type');
 
     switch (type) {
