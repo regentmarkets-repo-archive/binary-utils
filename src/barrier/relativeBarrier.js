@@ -1,5 +1,5 @@
-import type { Contract } from '../types';
+import type { ExtendedContract } from '../types';
 import commonRelativeBarrier from './commonRelativeBarrier';
 
-export default (contract: Contract, lastTickQuote: number): number =>
+export default (contract: ExtendedContract, lastTickQuote: number): number =>
     commonRelativeBarrier(contract.barrier, contract.entry_spot, lastTickQuote);

@@ -1,4 +1,3 @@
-
 export type Barriers = number[];
 
 export type ChartTick = number[];
@@ -15,13 +14,13 @@ export type ChartCandle = number[];
 
 export type Contract = {
     contract_type: string,
-    forward_starting_options: [],
-    barrier: ?number,
-    barrier2: ?number,
-    entry_spot: number,
+    forward_starting_options?: [],
+    barrier?: number,
+    barrier2?: number,
+    entry_spot?: number,
 };
 
-export type SpreadContract = {
+export type SpreadContract = Contract & {
     amount_per_point: number,
     stop_type: 'dollar' | 'point',
     stop_profit: number,
@@ -35,10 +34,10 @@ export type PrettySpreadContract = {
     stopLoss: number,
 };
 
-export type ExtendedContract = {
+export type ExtendedContract = Contract & {
     contract_type: string,
     barrierType: number,
-    entry_spot: number,
+    min_contract_duration: string,
 };
 
 export type ContractType = 'CALL' | 'PUT' | 'HIGHER' | 'LOWER' |
@@ -66,7 +65,7 @@ export type OpenContract = {
     contract_type: string,
     currency: string,
     longcode: string,
-    app_id: ?number,
+    app_id?: number,
 };
 
 export type Proposal = {
