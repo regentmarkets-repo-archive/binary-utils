@@ -3,5 +3,5 @@ export default (a: any[], b: any[]): boolean => {
         return false;
     }
 
-    return !(a.some((x, idx) => x !== b[idx]));
+    return !(a.some((x: any, idx: number): any => x !== b[idx]));
 };

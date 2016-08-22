@@ -1,4 +1,3 @@
-import type { ContractType } from '../types';
 import tradeTypes from './tradeTypes';
 
 export default (text: string): ContractType =>

@@ -1,5 +1,3 @@
-import type { ExtendedContract } from '../types';
-
 export default (contract: ExtendedContract, lastTickQuote: number, barrierEntryName: string = 'barrier'): number => {
     const barrierValue = +contract[barrierEntryName];
     if (!barrierValue) {

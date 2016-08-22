@@ -1,4 +1,2 @@
-import type { Proposal } from '../types';
-
-export default (proposal: Proposal) =>
+export default (proposal: Proposal): number =>
     proposal && +proposal.ask_price;

@@ -1,9 +1,7 @@
-type Getter = (x: any) => any;
-
-const getVal = (getter = x => x, arr: any[], i: number) =>
+const getVal = (getter: (x: any) => any = (x: any): any => x, arr: any[], i: number): number =>
     arr[i] ? getter(arr[i]) : Number.MAX_VALUE;
 
-export default (arr1: any[], arr2: any[], getter1: Getter, getter2: Getter) => {
+export default (arr1: any[], arr2: any[], getter1: (x: any) => any, getter2: (x: any) => any): any[] => {
     let i1 = 0;
     let i2 = 0;
     const result = [];

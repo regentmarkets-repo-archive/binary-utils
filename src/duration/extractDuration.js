@@ -1,7 +1,6 @@
-import type { ExtendedContract, ContractType } from '../types';
 import extractDurationHelper from './extractDurationHelper';
 
-export default (contracts: ExtendedContract[], type: ContractType) => {
+export default (contracts: ExtendedContract[], type: ContractType): ExtendedContract[] => {
     const contractsOfType = contracts.filter(c => c.contract_type === type);
     const nonForwardStartingContracts = contractsOfType.filter(c => !c.forward_starting_options);
 

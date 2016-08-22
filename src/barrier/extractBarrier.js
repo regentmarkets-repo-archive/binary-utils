@@ -1,10 +1,9 @@
-import type { Contract, ContractType } from '../types';
 import groupByKey from '../object/groupByKey';
 
 const extractDigitBarrierHelper = (contractsGroupedByExpiry: any): any => {
     const expiryTypes = Object.keys(contractsGroupedByExpiry);
     const result = {};
-    expiryTypes.forEach(et => {
+    expiryTypes.forEach((et: any) => {
         const contractsByExpiry = contractsGroupedByExpiry[et];
         result[et] = [{
             name: 'Digit',
@@ -18,7 +17,7 @@ const extractDigitBarrierHelper = (contractsGroupedByExpiry: any): any => {
 const extract2BarriersHelper = (contractsGroupedByExpiry: any): any => {
     const expiryTypes = Object.keys(contractsGroupedByExpiry);
     const result = {};
-    expiryTypes.forEach(et => {
+    expiryTypes.forEach((et: any) => {
         const contractsByExpiry = contractsGroupedByExpiry[et];
         result[et] = [
             { name: 'High barrier', defaultValue: contractsByExpiry[0].high_barrier },
@@ -31,9 +30,9 @@ const extract2BarriersHelper = (contractsGroupedByExpiry: any): any => {
 const extract1BarrierHelper = (contractGroupedByExpiry: any, barrierName: string): any => {
     const expiryTypes = Object.keys(contractGroupedByExpiry);
     const result = {};
-    expiryTypes.forEach(et => {
+    expiryTypes.forEach((et: any) => {
         const contractsByExpiry = contractGroupedByExpiry[et];
-        const contractWithBarrier = contractsByExpiry.find(c => !!c.barrier);
+        const contractWithBarrier = contractsByExpiry.find((c: Contract): boolean => !!c.barrier);
         if (!contractWithBarrier) {
             return;
         }

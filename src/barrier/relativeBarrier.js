@@ -1,4 +1,3 @@
-import type { ExtendedContract } from '../types';
 import commonRelativeBarrier from './commonRelativeBarrier';
 
 export default (contract: ExtendedContract, lastTickQuote: number): number =>

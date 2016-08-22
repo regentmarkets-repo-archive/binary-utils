@@ -1,4 +1,3 @@
-import type { Tick } from '../types';
 import doTicksEqual from './doTicksEqual';
 import doArrayDifferJustOneEntry from './doArrayDifferJustOneEntry';
 

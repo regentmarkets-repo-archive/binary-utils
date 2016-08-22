@@ -1,4 +1,4 @@
-export default () => {
+export default (): void => {
     if (document.exitFullscreen) {
         document.exitFullscreen();
     } else if (document.msExitFullscreen) {
