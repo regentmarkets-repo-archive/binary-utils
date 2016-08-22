@@ -2,7 +2,7 @@ type Getter = (x: any) => any;
 
 export default (arr1: any[], arr2: any[],
                 getter1: Getter = x => x, getter2: Getter = x => x,
-                deduplication: Boolean = true) => {
+                deduplication: boolean = true) => {
     /**
      * compare element using getter
      * @param a
