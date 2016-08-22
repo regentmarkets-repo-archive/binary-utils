@@ -3,7 +3,6 @@ type Getter = (x: any) => any;
 export default (arr1: any[], arr2: any[],
                 getter1: Getter = x => x, getter2: Getter = x => x,
                 deduplication: Boolean = true) => {
-
     /**
      * compare element using getter
      * @param a
@@ -17,10 +16,6 @@ export default (arr1: any[], arr2: any[],
         const valA = getter1(a);
         const valB = getter2(b);
 
-        if (valA === valB) {
-            return 0;
-        }
-
         if (valA > valB) {
             return 1;
         }
@@ -28,6 +23,8 @@ export default (arr1: any[], arr2: any[],
         if (valA < valB) {
             return -1;
         }
+
+        return 0;
     };
 
     // clone so that does not change arguments
@@ -52,7 +49,7 @@ export default (arr1: any[], arr2: any[],
         }
 
         const last = result.length > 0 && result[result.length - 1];
-        let toAdd = undefined;
+        let toAdd;
         switch (compare(a1Head, a2Head)) {
             case 0: {
                 if (deduplication) a2Clone.shift();
@@ -69,6 +66,7 @@ export default (arr1: any[], arr2: any[],
                 toAdd = a1Clone.shift();
                 break;
             }
+            default:                // impossible
         }
 
         // if dedup is true, do not append same element
