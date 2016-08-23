@@ -2,6 +2,7 @@ export { default as arrayEqual } from './array/arrayEqual';
 export { default as arrayMax } from './array/arrayMax';
 export { default as arrayMin } from './array/arrayMin';
 export { default as arrayToObject } from './array/arrayToObject';
+export { default as getLast } from './array/getLast';
 export { default as mergeSortedArrays } from './array/mergeSortedArrays';
 export { default as sequence } from './array/sequence';
 
@@ -86,7 +87,6 @@ export { default as doCandlesDifferJustOneEntry } from './ticks/doCandlesDifferJ
 export { default as doTicksDifferJustOneEntry } from './ticks/doTicksDifferJustOneEntry';
 export { default as doTicksEqual } from './ticks/doTicksEqual';
 export { default as getLastOHLCTick } from './ticks/getLastOHLCTick';
-export { default as getLastTick } from './ticks/getLastTick';
 export { default as getLastTickQuote } from './ticks/getLastTickQuote';
 export { default as historyToTicks } from './ticks/historyToTicks';
 export { default as ohlcToData } from './ticks/ohlcToData';
