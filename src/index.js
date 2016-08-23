@@ -87,7 +87,6 @@ export { default as doCandlesDifferJustOneEntry } from './ticks/doCandlesDifferJ
 export { default as doTicksDifferJustOneEntry } from './ticks/doTicksDifferJustOneEntry';
 export { default as doTicksEqual } from './ticks/doTicksEqual';
 export { default as getLastOHLCTick } from './ticks/getLastOHLCTick';
-export { default as getLastTick } from './ticks/getLastTick';
 export { default as getLastTickQuote } from './ticks/getLastTickQuote';
 export { default as historyToTicks } from './ticks/historyToTicks';
 export { default as ohlcToData } from './ticks/ohlcToData';
