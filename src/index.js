@@ -2,6 +2,7 @@ export { default as arrayEqual } from './array/arrayEqual';
 export { default as arrayMax } from './array/arrayMax';
 export { default as arrayMin } from './array/arrayMin';
 export { default as arrayToObject } from './array/arrayToObject';
+export { default as getLast } from './array/getLast';
 export { default as mergeSortedArrays } from './array/mergeSortedArrays';
 export { default as sequence } from './array/sequence';
 
