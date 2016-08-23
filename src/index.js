@@ -82,6 +82,7 @@ export { default as immutableChildrenToJS } from './object/immutableChildrenToJS
 export { default as areArraysEqual } from './ticks/areArraysEqual';
 export { default as areCandleArrayEqual } from './ticks/areCandleArrayEqual';
 export { default as areTickArraysEqual } from './ticks/areTickArraysEqual';
+export { default as doArrayDifferJustOneEntry } from './ticks/doArrayDifferJustOneEntry';
 export { default as doCandleEqual } from './ticks/doCandleEqual';
 export { default as doCandlesDifferJustOneEntry } from './ticks/doCandlesDifferJustOneEntry';
 export { default as doTicksDifferJustOneEntry } from './ticks/doTicksDifferJustOneEntry';
