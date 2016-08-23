@@ -1,5 +1,4 @@
 import getLastDigit from './getLastDigit';
-import type { Tick } from '../types';
 
 export default (ticks: Tick[], pips: number): number[] =>
     ticks.reduce((acc: number[], x: Tick) => {

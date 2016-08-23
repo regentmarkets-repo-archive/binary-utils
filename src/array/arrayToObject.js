@@ -1,6 +1,6 @@
-export default (arr: any[]): any =>
-    arr.reduce((obj: any, x: any) => {
-        Object.keys(x).forEach(key => {
+export default (arr: any[]): Object =>
+    arr.reduce((obj: Object, x: any): Object => {
+        Object.keys(x).forEach((key: any) => {
             if (Array.isArray(obj[key])) {
                 obj[key].push(x[key]);
             } else {

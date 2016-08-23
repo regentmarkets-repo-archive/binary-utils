@@ -1,5 +1,3 @@
-import type { Candle } from '../types';
-
 export default (ohlc1: Candle[], ohlc2: Candle[]): boolean => {
     const o1Len = ohlc1.length;
     const o2Len = ohlc2.length;

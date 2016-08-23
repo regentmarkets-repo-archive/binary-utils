@@ -1,4 +1,4 @@
-export default (handler: (e: Event) => void) => {
+export default (handler: (e: Event) => void): void => {
     document.addEventListener('fullscreenchange', () => handler(document.fullscreen));
     document.addEventListener('webkitfullscreenchange', () => handler(document.webkitIsFullScreen));
     document.addEventListener('mozfullscreenchange', () => handler(document.mozFullScreen));

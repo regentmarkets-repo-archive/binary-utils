@@ -1,4 +1,3 @@
-import type { DurationUnit } from '../types';
 import durationUnits from './durationUnits';
 import splitSecsToUnits from '../date/splitSecsToUnits';
 

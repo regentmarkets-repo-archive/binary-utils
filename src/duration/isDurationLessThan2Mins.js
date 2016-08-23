@@ -1,4 +1,3 @@
-import type { DurationUnit } from '../types';
 import isDurationTick from './isDurationTick';
 import durationToSecs from './durationToSecs';
 

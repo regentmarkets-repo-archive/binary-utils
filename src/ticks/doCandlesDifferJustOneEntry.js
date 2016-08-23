@@ -1,4 +1,3 @@
-import type { Candle } from '../types';
 import doCandleEqual from './doCandleEqual';
 import doArrayDifferJustOneEntry from './doArrayDifferJustOneEntry';
 

@@ -1,4 +1,3 @@
-import type { ExtendedContract, ContractType } from '../types';
 import durationSecHelper from './durationSecHelper';
 import extractMinMaxInUnits from './extractMinMaxInUnits';
 

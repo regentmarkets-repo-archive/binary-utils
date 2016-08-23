@@ -1,4 +1,4 @@
-export default (elem: HTMLElement) => {
+export default (elem: HTMLElement): void => {
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
     } else if (elem.msRequestFullscreen) {
