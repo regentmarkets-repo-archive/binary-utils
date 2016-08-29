@@ -8,11 +8,6 @@
 .*/addFullscreenEventListener.js
 .*/__tests__
 
-.*/extractDurationHelper
-.*/extractForwardStartingDuration
-.*/normalizedContractFor
-.*/extractDuration
-
 [include]
 
 [libs]
