@@ -56,9 +56,9 @@ declare module 'binary-utils' {
     declare function durationSecHelper(duration: string): number;
     declare function durationText(unit: DurationUnit): string;
     declare function durationToSecs(duration: number, unit: string): number;
-    declare function extractDuration(contracts: ExtendedContract[], type: ContractType): ExtendedContract[];
-    declare function extractDurationHelper(contracts: ExtendedContract[], type: ContractType): ExtendedContract[];
-    declare function extractForwardStartingDuration(contracts: Contract[], type: ContractType): ExtendedContract[];
+    declare function extractDuration(contracts: ExtendedContract[], type: ContractType): DurationOption[];
+    declare function extractDurationHelper(contracts: ExtendedContract[], type: ContractType): DurationOption[];
+    declare function extractForwardStartingDuration(contracts: ExtendedContract[], type: ContractType): ?ForwardStartingOption[];
     declare function extractMinMaxInUnits(minArg: number, maxArg: number, unit: DurationUnit): boolean;
     declare function isDurationLessThan2Mins(duration: number, durationUnit: DurationUnit): boolean;
     declare function isDurationTick(duration: string): boolean;

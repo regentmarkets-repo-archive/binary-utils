@@ -2,6 +2,17 @@ declare type Barriers = number[];
 declare type ChartTick = number[];
 declare type ChartCandle = number[];
 
+declare interface ForwardStartingOption {
+    range: any[],
+    options: DurationOption[]
+}
+
+declare interface DurationOption {
+    min: number,
+    max: number,
+    unit: 't' | 'm' | 'h' | 'd'
+}
+
 declare interface Candle {
     open: number,
     high: number,
@@ -37,6 +48,7 @@ declare interface ExtendedContract extends Contract {
     contract_type: string,
     barrierType: number,
     min_contract_duration: string,
+    max_contract_duration: string,
     [key: string]: any; // to allow contract[something]
 }
 

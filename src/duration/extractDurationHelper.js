@@ -1,7 +1,7 @@
 import durationSecHelper from './durationSecHelper';
 import extractMinMaxInUnits from './extractMinMaxInUnits';
 
-export default (contracts: ExtendedContract[], type: ContractType): ExtendedContract[] => {
+export default (contracts: ExtendedContract[], type: ContractType): DurationOption[] => {
     if (type.indexOf('SPREAD') > -1) {
         return [];
     }
@@ -11,7 +11,7 @@ export default (contracts: ExtendedContract[], type: ContractType): ExtendedCont
 
     const nonTickContracts = contracts.filter(c => c.min_contract_duration.slice(-1) !== 't');
     if (nonTickContracts.length === 0) {
-        return [tickDuration];
+        return tickDuration ? [tickDuration] : [];
     }
     const nonTickMinSec = nonTickContracts
         .map(c => durationSecHelper(c.min_contract_duration))
