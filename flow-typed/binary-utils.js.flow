@@ -1,8 +1,11 @@
+type Comparator = (a: any, b: any) => boolean;
+
 declare module 'binary-utils' {
     declare function arrayEqual(a: any[], b: any[]): boolean;
     declare function arrayMax(arr: any[]): number;
     declare function arrayMin(arr: any[]): number;
     declare function arrayToObject(arr: any[]): Object;
+    declare function getLast(arr: any[]): ?any;
     declare function mergeSortedArrays(arr1: any[], arr2: any[], getter1: (x: any) => any, getter2: (x: any) => any): any[];
     declare function sequence(n: number): number[];
 
@@ -81,6 +84,7 @@ declare module 'binary-utils' {
     declare function areArraysEqual(arr1: any[], arr2: any[]): boolean;
     declare function areCandleArrayEqual(ohlc1: Candle[], ohlc2: Candle[]): boolean;
     declare function areTickArraysEqual(ticks1: Tick[], ticks2: Tick[]): boolean;
+    declare function doArrayDifferJustOneEntry(arr1: any[], arr2: any[], eq: Comparator): boolean;
     declare function doCandleEqual(ohlc1: Candle, ohlc2: Candle): boolean;
     declare function doCandlesDifferJustOneEntry(candles1: Candle[], candles2: Candle[]): boolean;
     declare function doTicksDifferJustOneEntry(ticks1: Tick[], ticks2: Tick[]): boolean;
