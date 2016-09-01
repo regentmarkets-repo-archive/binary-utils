@@ -2,7 +2,7 @@ import arrayToObject from '../array/arrayToObject';
 import groupByKey from '../object/groupByKey';
 import extractDurationHelper from './extractDurationHelper';
 
-export default (contracts: ExtendedContract[], type: ContractType): ?ForwardStartingOption => {
+export default (contracts: AvailableContractDetails[], type: ContractType): ?ForwardStartingOption => {
     const forwardStartingContracts = contracts.filter(c => !!c.forward_starting_options && c.contract_type === type);
     if (forwardStartingContracts.length === 0) {
         return undefined;

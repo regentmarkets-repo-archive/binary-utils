@@ -1,7 +1,7 @@
 import durationSecHelper from './durationSecHelper';
 import extractMinMaxInUnits from './extractMinMaxInUnits';
 
-export default (contracts: ExtendedContract[], type: ContractType): DurationOption[] => {
+export default (contracts: AvailableContractDetails[], type: ContractType): DurationOption[] => {
     if (type.indexOf('SPREAD') > -1) {
         return [];
     }
