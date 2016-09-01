@@ -1,6 +1,8 @@
 type Comparator = (a: any, b: any) => boolean;
 
 declare module 'binary-utils' {
+    declare type Comparator = (a: any, b: any) => boolean;
+
     declare function arrayEqual(a: any[], b: any[]): boolean;
     declare function arrayMax(arr: any[]): number;
     declare function arrayMin(arr: any[]): number;
@@ -89,9 +91,9 @@ declare module 'binary-utils' {
     declare function doCandlesDifferJustOneEntry(candles1: Candle[], candles2: Candle[]): boolean;
     declare function doTicksDifferJustOneEntry(ticks1: Tick[], ticks2: Tick[]): boolean;
     declare function doTicksEqual(tick1: Tick, tick2: Tick): boolean;
-    declare function getLastOHLCTick(candles: Candle[]): ?number;
+    declare function getLastOHLCTick(candles: Candle[]): number;
     declare function getLastTick(ticks: Tick[]): ?Tick;
-    declare function getLastTickQuote(ticks: Tick[]): ?number;
+    declare function getLastTickQuote(ticks: Tick[]): number;
     declare function historyToTicks(history: any): Tick[];
     declare function ohlcToData(candle: Candle): ChartCandle;
     declare function ohlcToTicks(candles: Candle[]): Tick[];
