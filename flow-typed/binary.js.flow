@@ -1,6 +1,6 @@
 declare type Barriers = number[];
-declare type ChartTick = number[];
-declare type ChartCandle = number[];
+declare type ChartTick = any[];
+declare type ChartCandle = any[];
 
 declare interface ForwardStartingOption {
     range: any[],
