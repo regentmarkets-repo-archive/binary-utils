@@ -5,6 +5,7 @@ export { default as arrayToObject } from './array/arrayToObject';
 export { default as getLast } from './array/getLast';
 export { default as mergeSortedArrays } from './array/mergeSortedArrays';
 export { default as sequence } from './array/sequence';
+export { default as groupArrToNestedArr } from './array/groupArrToNestedArr';
 
 export { default as barrier2FromContract } from './barrier/barrier2FromContract';
 export { default as barrierFromContract } from './barrier/barrierFromContract';
