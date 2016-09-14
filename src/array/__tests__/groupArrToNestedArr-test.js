@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import groupArrToNestedArr from '../groupArrToNestedArr';
+import groupArrToNestedArr from '../groupArrayToNestedArray';
 
 describe('groupArrToNestedArr', () => {
     it('should return empty arr if input is empty', () => {
