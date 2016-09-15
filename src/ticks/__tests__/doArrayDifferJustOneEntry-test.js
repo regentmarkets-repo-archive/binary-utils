@@ -16,6 +16,20 @@ describe('doArrayDifferJustOneEntry', () => {
         expect(result).to.be.true;
     });
 
+    it('2 arrs with 1 same element should not differ by one', () => {
+        const a1 = [{ epoch: 1 }];
+        const a2 = [{ epoch: 1 }];
+
+        expect(doArrayDifferJustOneEntry(a1, a2, (a, b) => a.epoch === b.epoch)).to.be.false;
+    });
+
+    it('2 arrs with length 1 but diff element should differ by one', () => {
+        const a1 = [{ epoch: 2 }];
+        const a2 = [{ epoch: 1 }];
+
+        expect(doArrayDifferJustOneEntry(a1, a2, (a, b) => a.epoch === b.epoch)).to.be.true;
+    });
+
     it('a list that differs more than one item length do not differ by one', () => {
         const arr1 = [{ epoch: 1 }];
         const arr2 = [{ epoch: 1 }, { epoch: 2 }, { epoch: 3 }];
