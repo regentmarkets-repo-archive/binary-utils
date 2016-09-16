@@ -11,4 +11,9 @@ describe('typeHasBarrier', () => {
         const hasBarrier = typeHasBarrier('DIGITMATCH');
         expect(hasBarrier).to.be.true;
     });
+
+    it('non existing type has no barriers', () => {
+        const hasBarrier = typeHasBarrier('NOTEXISTING');
+        expect(hasBarrier).to.be.false;
+    });
 });
