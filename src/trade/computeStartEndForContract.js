@@ -1,6 +1,6 @@
 import nowAsEpoch from '../date/nowAsEpoch';
 
-export default contract => {
+export default (contract: Contract) => {
     const nowEpoch = nowAsEpoch();
     if (contract.tick_count) {
         const start = +(contract.date_start) - 5;
