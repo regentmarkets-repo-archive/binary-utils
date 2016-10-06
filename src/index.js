@@ -96,6 +96,7 @@ export { default as ohlcToTicks } from './ticks/ohlcToTicks';
 export { default as tickToData } from './ticks/tickToData';
 
 export { default as askPriceFromProposal } from './trade/askPriceFromProposal';
+export { default as computeStartEndForContract } from './trade/computeStartEndForContract';
 export { default as contractCategoryToText } from './trade/contractCategoryToText';
 export { default as contractCodeToText } from './trade/contractCodeToText';
 export { default as extractSpreadInfo } from './trade/extractSpreadInfo';
