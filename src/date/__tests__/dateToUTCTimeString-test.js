@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import dateToUTCTimeString from '../dateToUTCTimeString';
 
 describe('dateToUTCTimeString', () => {
@@ -6,6 +5,6 @@ describe('dateToUTCTimeString', () => {
         const theDate = new Date('2016-07-27 11:38:08');
         const givenTime = dateToUTCTimeString(theDate);
         const expectedTime = theDate.toISOString().slice(11, 19);
-        expect(givenTime).to.equal(expectedTime);
+        expect(givenTime).toEqual(expectedTime);
     });
 });

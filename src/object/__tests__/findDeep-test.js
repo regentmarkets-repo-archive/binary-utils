@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import findDeep from '../findDeep';
 
 describe('findDeep', () => {
@@ -22,7 +21,7 @@ describe('findDeep', () => {
         const result1 = findDeep(testObj, predicate1);
         const result2 = findDeep(testObj, predicate2);
 
-        expect(result1).to.be.true;
-        expect(result2).to.be.true;
+        expect(result1).toBeTruthy();
+        expect(result2).toBeTruthy();
     });
 });

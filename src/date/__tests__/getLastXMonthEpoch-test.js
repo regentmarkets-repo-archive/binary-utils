@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import getLastXMonthEpoch from '../getLastXMonthEpoch';
 
 describe('getLastXMonthEpoch', () => {
@@ -8,6 +7,6 @@ describe('getLastXMonthEpoch', () => {
         const givenEpoch = getLastXMonthEpoch(x)
         theDate.setMonth(theDate.getMonth() - x);
         const expectedEpoch = Math.floor(theDate.getTime() / 1000);
-        expect(expectedEpoch).to.equal(givenEpoch);
+        expect(expectedEpoch).toEqual(givenEpoch);
     });
 });

@@ -1,19 +1,18 @@
-import { expect } from 'chai';
 import typeHasBarrier from '../typeHasBarrier';
 
 describe('typeHasBarrier', () => {
     it('detects when a type has no barriers', () => {
         const hasBarrier = typeHasBarrier('CALL');
-        expect(hasBarrier).to.be.false;
+        expect(hasBarrier).toBeFalsy();
     });
 
     it('detects when a type has barriers', () => {
         const hasBarrier = typeHasBarrier('DIGITMATCH');
-        expect(hasBarrier).to.be.true;
+        expect(hasBarrier).toBeTruthy();
     });
 
     it('non existing type has no barriers', () => {
         const hasBarrier = typeHasBarrier('NOTEXISTING');
-        expect(hasBarrier).to.be.false;
+        expect(hasBarrier).toBeFalsy();
     });
 });

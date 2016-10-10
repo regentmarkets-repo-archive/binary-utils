@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import relativeBarrier from '../relativeBarrier';
 
 describe('relativeBarrier', () => {
@@ -8,7 +7,7 @@ describe('relativeBarrier', () => {
             entry_spot: 10,
         };
         const barrier = relativeBarrier(contract);
-        expect(barrier).to.equal(15);
+        expect(barrier).toEqual(15);
     });
 
     it('when no entry spot, barrier is an offset of the last tick', () => {
@@ -16,6 +15,6 @@ describe('relativeBarrier', () => {
             barrier: 5,
         };
         const barrier = relativeBarrier(contract, 20);
-        expect(barrier).to.equal(25);
+        expect(barrier).toEqual(25);
     });
 });

@@ -1,9 +1,7 @@
-import { expect } from 'chai';
 import computeStartEndForContract from '../computeStartEndForContract';
 import nowAsEpoch from '../../date/nowAsEpoch';
 
 describe('computeStartEndForContract', () => {
-
     // note: there's a buffer range for start and end, meaning it always
     // return a timespan slightly larger than the contract actual duration timespan
     // todo: make the buffer customizable if we have such use case
@@ -14,8 +12,8 @@ describe('computeStartEndForContract', () => {
             tick_count: 5,
         };
         const { start, end } = computeStartEndForContract(contract);
-        expect(start).to.be.lessThan(1475731075);
-        expect(end).to.be.equal(nowAsEpoch());
+        expect(start).toBeLessThan(1475731075);
+        expect(end).toEqual(nowAsEpoch());
     });
 
     it('get start and end for non-tick trade', () => {
@@ -24,8 +22,8 @@ describe('computeStartEndForContract', () => {
             date_expiry: 1475731375,
         };
         const { start, end } = computeStartEndForContract(contract);
-        expect(start).to.be.lessThan(1475731075);
-        expect(end).to.be.greaterThan(1475731075);
+        expect(start).toBeLessThan(1475731075);
+        expect(end).toBeGreaterThan(1475731075);
     });
 
     it('get start and end for contract ends future', () => {
@@ -35,8 +33,8 @@ describe('computeStartEndForContract', () => {
             date_expiry: fiveMinsLater + 300,
         };
         const { start, end } = computeStartEndForContract(contract);
-        expect(start).to.be.lessThan(fiveMinsLater);
-        expect(end).to.be.greaterThan(fiveMinsLater + 300);
+        expect(start).toBeLessThan(fiveMinsLater);
+        expect(end).toBeGreaterThan(fiveMinsLater + 300);
     });
 
     it('throws when contract end before start', () => {
@@ -46,7 +44,6 @@ describe('computeStartEndForContract', () => {
             date_expiry: fiveMinsLater - 300,
         };
 
-        expect(() => computeStartEndForContract(contract)).to.throw(RangeError);
+        expect(() => computeStartEndForContract(contract)).toThrow(RangeError);
     })
 });
-

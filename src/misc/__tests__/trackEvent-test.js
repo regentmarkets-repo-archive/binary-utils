@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import sinon from 'sinon';
 import { trackEvent } from '../Analytics';
 
@@ -11,6 +10,6 @@ describe('trackEvent', () => {
           eventCategory: 'Video',
           eventAction: 'play',
           eventLabel: 'cats.mp4',
-      })).to.be.true;
+      })).toBeTruthy();
     });
 });

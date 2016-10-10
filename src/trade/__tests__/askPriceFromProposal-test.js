@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import askPriceFromProposal from '../askPriceFromProposal';
 
 describe('askPriceFromProposal', () => {
@@ -7,6 +6,6 @@ describe('askPriceFromProposal', () => {
             ask_price: '123',
         };
         const price = askPriceFromProposal(proposal);
-        expect(price).to.equal(123);
+        expect(price).toEqual(123);
     });
 });

@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import timeStringIsBetween from '../timeStringIsBetween';
 
 describe('timeStringIsBetween', () => {
@@ -7,7 +6,7 @@ describe('timeStringIsBetween', () => {
         const start = '08:00:00';
         const end = '10:10:00';
 
-        expect(timeStringIsBetween(start, end, target)).to.be.true;
+        expect(timeStringIsBetween(start, end, target)).toBeTruthy();
     });
 
     it('should return false if target string is outside of start and end time string', () => {
@@ -15,7 +14,7 @@ describe('timeStringIsBetween', () => {
         const start = '08:00:00';
         const end = '10:10:00';
 
-        expect(timeStringIsBetween(start, end, target)).to.be.false;
+        expect(timeStringIsBetween(start, end, target)).toBeFalsy();
     });
 
     it('should return true if start time is larger than end time, and target time is within range', () => {
@@ -23,7 +22,7 @@ describe('timeStringIsBetween', () => {
         const start = '10:10:00';
         const end = '08:00:00';
 
-        expect(timeStringIsBetween(start, end, target)).to.be.true;
+        expect(timeStringIsBetween(start, end, target)).toBeTruthy();
     });
 
     it('should return false if start time is larger than end time, and target time is out of range', () => {
@@ -31,6 +30,6 @@ describe('timeStringIsBetween', () => {
         const start = '10:10:00';
         const end = '08:00:00';
 
-        expect(timeStringIsBetween(start, end, target)).to.be.false;
+        expect(timeStringIsBetween(start, end, target)).toBeFalsy();
     });
 });

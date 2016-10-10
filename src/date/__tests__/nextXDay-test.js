@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import nextXDay from '../nextXDay';
 
 describe('nextXDay', () => {
@@ -6,6 +5,6 @@ describe('nextXDay', () => {
         const theDate = new Date();
         theDate.setDate(theDate.getDate() + 20);
         const givenDate = nextXDay(20);
-        expect(givenDate.toDateString()).to.equal(theDate.toDateString());
+        expect(givenDate.toDateString()).toEqual(theDate.toDateString());
     });
 });

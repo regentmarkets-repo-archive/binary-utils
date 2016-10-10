@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import areArraysEqual from '../areArraysEqual';
 
 describe('areArraysEqual', () => {
@@ -6,27 +5,27 @@ describe('areArraysEqual', () => {
         const ticks1 = [];
         const ticks2 = [];
         const result = areArraysEqual(ticks1, ticks2);
-        expect(result).to.be.true;
+        expect(result).toBeTruthy();
     });
 
     it('different arrays are not equal', () => {
         const ticks1 = [];
         const ticks2 = [1, 2, 3];
         const result = areArraysEqual(ticks1, ticks2);
-        expect(result).to.be.false;
+        expect(result).toBeFalsy();
     });
 
     it('arrays that are the same are equal', () => {
         const ticks1 = [1, 2, 3];
         const ticks2 = ticks1;
         const result = areArraysEqual(ticks1, ticks2);
-        expect(result).to.be.true;
+        expect(result).toBeTruthy();
     });
 
     it('arrays that have the same values are equal', () => {
         const ticks1 = [1, 2, 3];
         const ticks2 = [1, 2, 3];
         const result = areArraysEqual(ticks1, ticks2);
-        expect(result).to.be.true;
+        expect(result).toBeTruthy();
     });
 });

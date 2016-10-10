@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import groupByKey from '../groupByKey';
 
 describe('groupByKey', () => {
@@ -39,6 +38,6 @@ describe('groupByKey', () => {
         ];
 
         const grouped = groupByKey(arr, 'value');
-        expect(Object.keys(grouped).length).to.equal(5);
+        expect(Object.keys(grouped).length).toEqual(5);
     });
 });

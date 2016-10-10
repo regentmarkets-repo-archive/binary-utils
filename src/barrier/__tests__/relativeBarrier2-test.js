@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import relativeBarrier2 from '../relativeBarrier2';
 
 describe('relativeBarrier2', () => {
@@ -8,6 +7,6 @@ describe('relativeBarrier2', () => {
             barrier2: 20,
         };
         const barrier = relativeBarrier2(contract, 20);
-        expect(barrier).to.equal(40);
+        expect(barrier).toEqual(40);
     });
 });

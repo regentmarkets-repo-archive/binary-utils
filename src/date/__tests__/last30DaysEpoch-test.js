@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import last30DaysEpoch from '../last30DaysEpoch';
 
 describe('last30DaysEpoch', () => {
@@ -6,6 +5,6 @@ describe('last30DaysEpoch', () => {
         const range = -29 * 60 * 60 * 24;
         const exptedEpoch = Math.floor(Date.now() / 1000) + range;
         const givenEpoch = last30DaysEpoch();
-        expect(exptedEpoch).to.equal(givenEpoch);
+        expect(exptedEpoch).toEqual(givenEpoch);
     });
 });

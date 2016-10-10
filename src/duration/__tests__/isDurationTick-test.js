@@ -1,16 +1,15 @@
-import { expect } from 'chai';
 import isDurationTick from '../isDurationTick';
 
 describe('isDurationTick', () => {
     it('should return false when duration is undefined', () => {
-        expect(isDurationTick()).to.be.false;
+        expect(isDurationTick()).toBeFalsy();
     });
 
      it('should return false where duration is not tick', () => {
-        expect(isDurationTick('s')).to.be.false;
+        expect(isDurationTick('s')).toBeFalsy();
     });
 
      it('should return true where duration is tick', () => {
-        expect(isDurationTick('t')).to.be.true;
+        expect(isDurationTick('t')).toBeTruthy();
     });
 });

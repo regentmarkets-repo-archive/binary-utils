@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import epochToTimeString from '../epochToTimeString';
 
 describe('epochToTimeString', () => {
@@ -8,6 +7,6 @@ describe('epochToTimeString', () => {
         const givenTime = epochToTimeString(epoch);
 		const newDate = new Date((new Date(epoch * 1000)) - ((new Date(epoch * 1000)).getTimezoneOffset() * 60 * 1000)).toISOString();
         const expectedTime = newDate.slice(11, 19);
-        expect(expectedTime).to.equal(givenTime);
+        expect(expectedTime).toEqual(givenTime);
     });
 });

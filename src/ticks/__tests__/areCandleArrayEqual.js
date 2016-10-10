@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import areCandleArrayEqual from '../areCandleArrayEqual';
 
 describe('areOHLCArraysEqual', () => {
@@ -6,27 +5,27 @@ describe('areOHLCArraysEqual', () => {
         const ticks1 = [];
         const ticks2 = [];
         const result = areCandleArrayEqual(ticks1, ticks2);
-        expect(result).to.be.true;
+        expect(result).toBeTruthy();
     });
 
     it('tick lists with different legths are never equal', () => {
         const ticks1 = [];
         const ticks2 = [1];
         const result = areCandleArrayEqual(ticks1, ticks2);
-        expect(result).to.be.false;
+        expect(result).toBeFalsy();
     });
 
     it('ticks lists with same epoch & close as last item equal', () => {
         const ticks1 = [{ epoch: 1, close: 123 }];
         const ticks2 = [{ epoch: 1, close: 123 }];
         const result = areCandleArrayEqual(ticks1, ticks2);
-        expect(result).to.be.true;
+        expect(result).toBeTruthy();
     });
 
     it('ticks lists with same epoch but different close as last item does not equal', () => {
         const ticks1 = [{ epoch: 1, close: 123 }];
         const ticks2 = [{ epoch: 1, close: 456 }];
         const result = areCandleArrayEqual(ticks1, ticks2);
-        expect(result).to.be.false;
+        expect(result).toBeFalsy();
     });
 });

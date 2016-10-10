@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import historyToTicks from '../historyToTicks';
 
 describe('historyToTicks', () => {
@@ -31,7 +30,7 @@ describe('historyToTicks', () => {
 
     it('should convert response from tick history call, to array of tick object', () => {
         const actual = historyToTicks(serverData);
-        expect(actual).to.have.lengthOf(10);
-        expect(actual[0]).to.be.deep.equal({ epoch: 1463130332, quote: 675.1733 });
+        expect(actual.length).toEqual(10);
+        expect(actual[0]).toEqual({ epoch: 1463130332, quote: 675.1733 });
     });
 });

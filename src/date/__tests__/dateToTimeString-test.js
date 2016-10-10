@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import dateToTimeString from '../dateToTimeString';
 
 describe('dateToTimeString', () => {
@@ -7,7 +6,7 @@ describe('dateToTimeString', () => {
         const givenTime = dateToTimeString(theDate);
         const newDate = new Date(theDate - (theDate.getTimezoneOffset() * 60 * 1000)).toISOString();
         const expectedTime = newDate.slice(11, 19);
-        expect(givenTime).to.equal(expectedTime);
-        expect(expectedTime).to.equal('11:38:08');
+        expect(givenTime).toEqual(expectedTime);
+        expect(expectedTime).toEqual('11:38:08');
     });
 });

@@ -16,8 +16,8 @@ module.exports = wallaby => ({
     compilers: {
         '**/*.js': wallaby.compilers.babel({
             presets: [
-                'es2015',
-                'stage-1',
+                'latest',
+                'stage-3'
             ],
         }),
     },

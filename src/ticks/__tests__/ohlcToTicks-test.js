@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import candles from 'binary-test-data/candles';
 import ohlcToTicks from '../ohlcToTicks';
 
@@ -14,6 +13,6 @@ describe('ohlcToTicks', () => {
 
         const actual = ohlcToTicks(candles);
 
-        expect(actual).to.be.deep.equal(expected);
+        expect(actual).toEqual(expected);
     });
 });

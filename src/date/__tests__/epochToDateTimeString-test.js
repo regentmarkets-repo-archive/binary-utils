@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import epochToDateTimeString from '../epochToDateTimeString';
 
 describe('epochToDateTimeString', () => {
@@ -7,6 +6,6 @@ describe('epochToDateTimeString', () => {
         const epoch = theDate.getTime();
         const givenDateTime = epochToDateTimeString(epoch);
         const expectedDateTime = new Date(epoch * 1000).toUTCString();
-        expect(givenDateTime).to.equal(expectedDateTime);
+        expect(givenDateTime).toEqual(expectedDateTime);
     });
 });

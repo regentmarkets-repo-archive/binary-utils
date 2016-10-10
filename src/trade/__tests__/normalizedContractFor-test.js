@@ -1,26 +1,25 @@
-import { expect } from 'chai';
 import mockedContract from 'binary-test-data/contractsForGDAXI';
 import normalizedContractFor from '../normalizedContractFor';
 
 describe('normalizedContractFor', () => {
     it('accept a list ', () => {
-        expect(normalizedContractFor([])).to.not.throw;
+        expect(() => normalizedContractFor([])).not.toThrow();
     });
 
     it('when called with empty list as input, returns empty list', () => {
         const normalized = normalizedContractFor([]);
-        expect(normalized).to.deep.equal({});
+        expect(normalized).toEqual({});
     });
 
-    it(`
-        should return a tree like object with hierarchy as follow
+    it(`should return a tree like object with hierarchy as follow
         -> category
            -> type
-              -> [{...}]
-    `, () => {
+              -> [{...}]`, () => {
         const normalized = normalizedContractFor(mockedContract);
-        expect(normalized).to.contains.keys(['callput', 'touchnotouch']);
-        expect(normalized.callput).to.contains.keys(['CALL', 'PUT']);
-        expect(normalized.callput.CALL).to.have.lengthOf(4);
+        expect(normalized.callput).toBeDefined();
+        expect(normalized.touchnotouch).toBeDefined();
+        expect(normalized.callput.CALL).toBeDefined();
+        expect(normalized.callput.PUT).toBeDefined();
+        expect(normalized.callput.CALL.length).toEqual(4);
     });
 });

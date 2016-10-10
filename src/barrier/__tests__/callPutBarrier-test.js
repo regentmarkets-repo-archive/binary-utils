@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import callPutBarrier from '../callPutBarrier';
 
 describe('callPutBarrier', () => {
@@ -7,13 +6,13 @@ describe('callPutBarrier', () => {
             entry_spot: 10,
         };
         const barrier = callPutBarrier(contract);
-        expect(barrier).to.equal(10);
+        expect(barrier).toEqual(10);
     });
 
     it('call or put contract without a barrier is Rise/Fall type, if no Entry Spot provided use last tick', () => {
         const contract = {};
         const barrier = callPutBarrier(contract, { quote: 20 });
-        expect(barrier.quote).to.equal(20);
+        expect(barrier.quote).toEqual(20);
     });
 
     it('call or put contract with barrier is Higher/Lower type, Entry Spot is used if provide', () => {
@@ -22,7 +21,7 @@ describe('callPutBarrier', () => {
             entry_spot: 10,
         };
         const barrier = callPutBarrier(contract);
-        expect(barrier).to.equal(15);
+        expect(barrier).toEqual(15);
     });
 
     it('call or put contract with barrier is Higher/Lower type, if no Entry Spot provided use last tick', () => {
@@ -30,6 +29,6 @@ describe('callPutBarrier', () => {
             barrier: 5,
         };
         const barrier = callPutBarrier(contract, 20);
-        expect(barrier).to.equal(25);
+        expect(barrier).toEqual(25);
     });
 });
