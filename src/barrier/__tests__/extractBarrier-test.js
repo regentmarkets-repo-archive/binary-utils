@@ -5,10 +5,9 @@ import normalizedContractFor from '../../trade/normalizedContractFor';
 describe('extractBarrier', () => {
     const normalized = normalizedContractFor(contracts);
 
-    it('unknown type throws', () => {
-        expect(() =>
-            extractBarrier(normalized.risefall.CALL, 'nonexisting')
-        ).toThrow();
+    it('unknown type return undefined', () => {
+        const barrier = extractBarrier(normalized.risefall.CALL, 'nonexisting');
+        expect(barrier).toBeUndefined();
     });
 
     describe('RISE FALL type', () => {
@@ -127,7 +126,7 @@ describe('extractBarrier', () => {
     describe('ASIAN', () => {
         const asianBarrier = extractBarrier(normalized.asian.ASIANU, 'ASIANU');
         it('does not have barrier', () => {
-            expect(asianBarrier).not.toBeDefined()
+            expect(asianBarrier).not.toBeDefined();
         });
     });
 });

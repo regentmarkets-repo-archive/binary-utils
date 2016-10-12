@@ -75,9 +75,7 @@ export default (contracts: Contract[], type: ContractType): ?number => {
         case 'ASIAND':
         case 'SPREADU':
         case 'SPREADD':
+        default:
             return undefined;
-        default: {
-            throw new Error(`Unknown trade type: ${type}`);
-        }
     }
 };
