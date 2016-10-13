@@ -1,7 +1,11 @@
 // only supported format = "hh:mm", seconds are not supported
 export default (timeString: string): number => {
-    const h = +timeString.slice(0, 2);
-    const m = +timeString.slice(3, 5);
+    const tokens = timeString.split(':');
+    if (tokens.length !== 2) {
+        throw new Error(`Time string format incorrect, expecting HH:mm, actual: ${timeString}`);
+    }
+    const h = +tokens[0];
+    const m = +tokens[1];
 
     return (h * 3600) + (m * 60);
 };
