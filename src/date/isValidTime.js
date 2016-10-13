@@ -1,6 +1,6 @@
 export default (time: string): boolean => {
     const tokens = time.split(':');
-    if (tokens.length !== 2) {
+    if (tokens.length < 2 || tokens.length > 3) {
         return false;
     }
 
