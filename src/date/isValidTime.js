@@ -10,5 +10,5 @@ export default (time: string): boolean => {
             case 1: return parseInt(val, 0) <= 59;
             default: return parseInt(val, 0) <= 59;
         }
-    }).indexOf(false) > -1;
+    }).indexOf(false) === -1;
 };
