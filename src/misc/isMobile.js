@@ -1,2 +1,3 @@
 export default (): boolean =>
-    typeof window !== 'undefined' && /Mobile/.test(window.navigator.userAgent);
+    typeof window !== 'undefined' &&
+        (document.location.protocol === 'file:' || /Mobile/.test(window.navigator.userAgent));
