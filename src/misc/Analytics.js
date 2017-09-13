@@ -2,7 +2,7 @@ type NullFunc = () => void;
 
 const nullFunc: NullFunc = () => {};
 
-const analytics = (ga: any): () => void =>
+const analytics = (ga: any): (...args: Array<any>) => void =>
     ga || (typeof window !== 'undefined' && window.ga) || nullFunc;
 
 export const trackUserId = (userId: string, ga: any): void =>
