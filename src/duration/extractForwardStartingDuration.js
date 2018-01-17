@@ -8,10 +8,6 @@ export default (contracts: AvailableContractDetails[], type: ContractType): ?For
         return undefined;
     }
 
-    if (forwardStartingContracts.length > 1) {
-        throw new Error('Can not have more than one contract with forward starting options');
-    }
-
     const forwardOptions = forwardStartingContracts[0].forward_starting_options;
     const groupByDate = groupByKey(forwardOptions || [], 'date');
     const forwardStartingRange = [];
