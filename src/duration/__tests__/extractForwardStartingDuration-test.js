@@ -27,17 +27,5 @@ describe('extractForwardStartingDuration', () => {
         const duration = extractForwardStartingDuration(mockedContract, 'UNKNOWN TYPE');
         expect(duration).not.toBeDefined()
     });
-
-    it('exception is thrown if two contracts forward starting for same type', () => {
-        const contractFor = [{
-            contract_type: 'CALL',
-            forward_starting_options: [],
-        }, {
-            contract_type: 'CALL',
-            forward_starting_options: [],
-        }];
-        expect(() =>
-            extractForwardStartingDuration(contractFor, 'CALL')
-        ).toThrow(/forward starting/);
-    });
+    
 });
